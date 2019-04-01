@@ -1,0 +1,231 @@
+<!--<header >
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
+  <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark scrolling-navbar fixed-top " [containerInside]="true">
+    <mdb-navbar-brand>
+      <a class="logo navbar-brand h1" href="#">
+        <span><img src="../../assets/images/udsm_logo.png" width="23%" > Udsm</span>
+      </a>
+    </mdb-navbar-brand>
+    <links>
+      <ul class="navbar-nav ml-auto " >
+
+        <li *ngFor="let item of navItem" class="nav-item waves-light" [class.active]="(item.act)" mdbWavesEffect >
+           <a class="nav-link" routerLink="/{{item.item}}" routerLinkActive="active">
+             <mdb-icon fas icon="{{item.icn}}" class="left"></mdb-icon> <span class="navstyle">  {{item.item}}</span>
+           &lt;!&ndash; <span class="sr-only">(current)</span>&ndash;&gt;
+          </a>
+       </ul>
+    </links>
+
+  </mdb-navbar>
+  &lt;!&ndash; Main &ndash;&gt;
+  &lt;!&ndash;<div class="view intro-2" style="">
+    <mdb-carousel class="carousel slide carousel-fade " [animation]="'fade'" >
+
+      <mdb-carousel-item *ngFor="let image of images" >
+        <div class="view w-100">
+          <img class="d-block w-100" src="assets/images/{{image}}" alt="First slide">
+          <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
+        </div>
+        <div class="carousel-caption " >
+          <div class="home-jumbotron">
+            <h2 class="card-title h1-responsive pt-3 mb-5 font-bold"><strong>Create your </strong></h2>
+            <p class="mx-5 mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam,
+              voluptatem,
+              optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos. Odit sed qui,
+              dolorum!
+            </p>
+            <a mdbBtn color="white" outline="true" class="waves-light" mdbWavesEffect>
+              <mdb-icon fas icon="clone" class="left"></mdb-icon>View project
+            </a>
+            <br> <br> <br>
+          </div>
+        </div>
+      </mdb-carousel-item>
+    </mdb-carousel>
+
+  </div>&ndash;&gt;
+  &lt;!&ndash; /.Main &ndash;&gt;
+
+&lt;!&ndash;Main Navigation&ndash;&gt;
+
+
+
+
+&lt;!&ndash; SideNav slide-out button &ndash;&gt;
+&lt;!&ndash;
+<a (click)="sidenav.toggle()" class="btn btn-primary p-3 button-collapse"><i class="fas fa-bars"></i></a>
+&ndash;&gt;
+&lt;!&ndash;/. SideNav slide-out button &ndash;&gt;
+
+  &lt;!&ndash;mdbCollapse [isCollapsed]="false"&ndash;&gt;
+&lt;!&ndash; Sidebar navigation &ndash;&gt;
+
+  &lt;!&ndash;
+<mdb-side-nav #sidenav class="flex-center studnt-nav-bg intro-fixed-nav float-left"  [fixed]="true">
+  <div class="student-nav-bg flex-center">
+  <div class="fluid student-nav">
+    &lt;!&ndash; Logo &ndash;&gt;
+  <li>
+    <div class="logo-wrapper waves-light">
+      <a href="#"><img src="../../assets/images/udsm_logo.png" class="img-fluid flex-center">
+      Udsm Ds Seminar</a>
+    </div>
+  </li>
+  &lt;!&ndash;/. Logo &ndash;&gt;
+  &lt;!&ndash;Social&ndash;&gt;
+  <li>
+    <ul class="social">
+      <li><a class="icons-sm fb-ic"><i class="fab fa-facebook-f"> </i></a></li>
+      <li><a class="icons-sm pin-ic"><i class="fab fa-pinterest"> </i></a></li>
+      <li><a class="icons-sm gplus-ic"><i class="fab fa-google-plus"> </i></a></li>
+      <li><a class="icons-sm tw-ic"><i class="fab fa-twitter"> </i></a></li>
+    </ul>
+  </li>
+  &lt;!&ndash;/Social&ndash;&gt;
+  &lt;!&ndash;Search Form&ndash;&gt;
+  <li>
+    <form class="search-form" role="search">
+      <div class="form-group md-form waves-light" mdbWavesEffect>
+        <input type="text" class="form-control" placeholder="Search">
+      </div>
+    </form>
+  </li>
+  &lt;!&ndash;/.Search Form&ndash;&gt;
+  &lt;!&ndash; Side navigation links &ndash;&gt;
+  <li>
+    <ul class="collapsible ">
+      <mdb-accordion [multiple]="false" aria-multiselectable="false">
+
+        &lt;!&ndash; Collapsible link &ndash;&gt;
+        <mdb-item>
+          <mdb-item-head mdbWavesEffect><i class="fas fa-chevron-right"></i> Collapsible menu
+          </mdb-item-head>
+          <mdb-item-body>
+            <ul>
+              <li><a href="#" mdbWavesEffect>Link 1</a></li>
+              <li><a href="#" mdbWavesEffect>Link 2</a></li>
+            </ul>
+          </mdb-item-body>
+        </mdb-item>
+
+        &lt;!&ndash; Simple link &ndash;&gt;
+        <mdb-item class="no-collase">
+          <mdb-item-head mdbWavesEffect><i class="far fa-hand-pointer"></i> Simple link
+          </mdb-item-head>
+          <mdb-item-body></mdb-item-body>
+        </mdb-item>
+
+        &lt;!&ndash; Collapsible link &ndash;&gt;
+        <mdb-item>
+          <mdb-item-head mdbWavesEffect><i class="far fa-eye"></i> Collapsible menu 2
+          </mdb-item-head>
+          <mdb-item-body>
+            <ul>
+              <li><a href="#" mdbWavesEffect>Link 1</a></li>
+              <li><a href="#" mdbWavesEffect>Link 2</a></li>
+            </ul>
+          </mdb-item-body>
+        </mdb-item>
+
+        &lt;!&ndash; Simple link &ndash;&gt;
+        <mdb-item class="no-collase">
+          <mdb-item-head mdbWavesEffect><i class="far fa-gem"></i> Simple link 2</mdb-item-head>
+          <mdb-item-body></mdb-item-body>
+        </mdb-item>
+
+      </mdb-accordion>
+    </ul>
+  </li>
+  &lt;!&ndash;/. Side navigation links &ndash;&gt;
+  <div class="sidenav-bg mask-strong"></div>
+  </div>
+  </div>
+</mdb-side-nav>
+&ndash;&gt;
+&lt;!&ndash;/. Sidebar navigation &ndash;&gt;
+</header>-->
+
+
+
+<!--Main Navigation-->
+<header>
+
+  <!-- Sidebar -->
+  <div class="sidebar-fixed position-fixed skin-image ">
+    <div class="skin-color">
+    <a class="logo-wrapper waves-effect">
+      <img src="../../../assets/images/udsm_logo.png" class="img-fluid flex-center" alt="">
+
+    </a>
+    <div class="list-group list-group-flush">
+      <h5 class="white-text flex-center">DS Seminar Registration</h5>
+
+
+      <a (click)="setSelectedPage('profile')"  class="list-group-item list-group-item-action white-text waves-effect">
+        <mdb-icon fas icon="user" class="mr-3"></mdb-icon>Profile</a>
+      <a (click)="setSelectedPage('seminar')"  class="list-group-item list-group-item-action white-text waves-effect">
+        <mdb-icon fas icon="table" class="mr-3"></mdb-icon>Seminars</a>
+      <a routerLink="nonExistingPath" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
+        <mdb-icon fas icon="exclamation" class="mr-3"></mdb-icon>LogOut</a>
+      <a></a>
+
+    </div>
+    </div>
+  </div>
+  <!-- Sidebar -->
+
+  <!--Navbar-->
+  <mdb-navbar [containerInside]="false" SideClass="navbar navbar-expand-lg  navbar-dark fixed-top">
+
+    <!-- Navbar brand -->
+    <logo class="ml-3 ">
+      <a class="navbar-brand " href="https://mdbootstrap.com/angular/angular-bootstrap-getting-started/">
+        <strong class="white-text">DS Registration</strong>
+      </a>
+    </logo>
+
+    <!-- Collapsible content -->
+    <links>
+
+      <!-- Links -->
+
+      <!-- Links -->
+
+      <!-- Search form -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a href="https://github.com/mdbootstrap/bootstrap-material-design" class="nav-link "
+             target="_blank" mdbWavesEffect>
+            <span class="sr-only">(current)</span>
+            <mdb-icon fas icon="user" class="mr-2"></mdb-icon>Profile
+
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://github.com/mdbootstrap/bootstrap-material-design" class="nav-link"
+             target="_blank" mdbWavesEffect>
+            <mdb-icon fas icon="table" class="mr-2"></mdb-icon>Seminars
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://mdbootstrap.com/products/angular-ui-kit/" class="ml-1 nav-link " mdbWavesEffect>
+            <mdb-icon fas icon="exclamation" class=" left"></mdb-icon> LogOut</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item-regid white-text h4">
+          <span>2016:00:00000</span>
+          &nbsp;&nbsp;&nbsp;
+          <span>Surname, Frirstname Lastname</span>
+        </li>
+      </ul>
+    </links>
+    <!-- Collapsible content -->
+
+  </mdb-navbar>
+  <!--/.Navbar-->
+
+</header>
+<!--Main Navigation-->

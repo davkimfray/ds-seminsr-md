@@ -1,0 +1,66 @@
+
+<!--
+<div class="container table-responsive">
+  <table mdbTable hover="true">
+    <thead class="black white-text">
+    <tr>
+      <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr mdbTableCol>
+      <th scope="row">{{element.seminarId }}</th>
+      <td>{{element.cou_name }}</td>
+      <td>{{element.day }}</td>
+      <td>{{element.hour }}</td>
+      <td>{{element.capacity - element.no_of_student }}</td>
+      <td>{{element.ven_name }}</td>
+      <td>{{element.f_name }}</td>
+      <td>
+        &lt;!&ndash; read one product button &ndash;&gt;
+        <a (click)="readOneProduct(product.id)" class='btn btnreg btn-primary'>
+          <span><i class="fas fa-eye white-text" ></i> Read</span>
+        </a>
+
+        &lt;!&ndash; edit product button &ndash;&gt;
+        &lt;!&ndash; <a (click)="updateProduct(product.id)" class='btn btn-info'>
+           <i class="fas fa-edit white-text" ></i> Edit
+         </a>&ndash;&gt;
+
+        &lt;!&ndash; delete product button &ndash;&gt;
+        &lt;!&ndash; <a (click)="deleteProduct(product.id)" class='btn btn-danger'>
+           <i class="fas fa-trash-alt white-text" ></i> Delete
+         </a>&ndash;&gt;
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
+-->
+
+
+<div class="container animated fadeIn">
+  <div class="row">
+        <span class="col-md-4 ">
+          <span class="h5">Course: </span>{{seminar.cou_name }}
+        </span>
+    <span class="col-md-4 ">
+          <span class="h5">Day: </span>{{seminar.day }}
+        </span>
+    <span class="col-md-4">
+          <span class="h5">Time: </span>{{seminar.hour }}
+        </span>
+  </div>
+  <div class="row">
+        <span class="col-md-4 ">
+          <span class="h5">Students: </span>{{seminar.no_of_student  }}
+        </span>
+    <span class="col-md-4 ">
+          <span class="h5">Venue: </span>{{seminar.ven_name }}
+        </span>
+    <span class="col-md-4">
+          <span class="h5">Lecturer: </span>{{seminar.f_name }}
+        </span>
+  </div>
+</div>

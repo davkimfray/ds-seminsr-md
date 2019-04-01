@@ -1,0 +1,51 @@
+.intro-header {
+  /*
+  height: unset !important;
+  */
+}
+body {
+  background: url("../../assets/images/udsm.jpg")no-repeat center center;
+}
+
+.top-nav-collapse {
+  background-color: #3f51b5 !important;
+}
+.navbar:not(.top-nav-collapse) {
+  background: transparent !important;
+}
+
+.inline-ul {
+  color: rgb(70, 171, 230);
+}
+button{
+  border-radius: 20px;
+}
+.nav strong{
+  font-size: 36px;
+}
+.row {
+  margin-top: 3%;
+}
+.forgot-pas u {
+  font-family: 'Lato', sans-serif;
+  font-style: italic;
+  font-size: 20px;
+  color: #2bbbad ;
+}
+.loader-body {
+  padding-left: 50%;
+  padding-top: 10px;
+}
+.loader {
+  border: 4px solid #f3f3f3; /* Light grey */
+  border-top: 4px solid #00C1AB; /* Blue */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

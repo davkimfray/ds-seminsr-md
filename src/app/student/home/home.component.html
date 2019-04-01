@@ -1,0 +1,64 @@
+<!--
+Main Navigation
+<body class=" intro-2">
+<div class="full-bg-img mask rgba-gradient">
+  <div class="container flex-center ">
+    <div class="flex align-items-center content-height w-100">
+      <div class="row head w-100   white-text">
+        <span class="heading text-center"><img src="../../assets/images/udsm_logo.png" width="20%">University of Dar es salaam</span>
+      </div>
+
+      <div  class="row flex-center w-100">
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+Main Navigation
+
+-->
+
+<app-navbar></app-navbar>
+<router-outlet></router-outlet>
+
+<div class="container">
+  <table mdbTable hover="true">
+    <thead class="black white-text">
+    <tr>
+      <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr mdbTableCol *ngFor="let element of elements| async ">
+      <th scope="row">{{element.seminarId }}</th>
+      <td>{{element.cou_name }}</td>
+      <td>{{element.day }}</td>
+      <td>{{element.hour }}</td>
+      <td>{{element.capacity - element.no_of_student }}</td>
+      <td>{{element.ven_name }}</td>
+      <td>{{element.f_name }}</td>
+      <td>
+        <!-- read one product button -->
+        <a (click)="readOneProduct(seminar.id)" class='btnreg btn-primary'>
+          <i class="fas fa-eye white-text" ></i> Read
+        </a>
+
+        <!-- edit product button -->
+       <!-- <a (click)="updateProduct(product.id)" class='btn btn-info'>
+          <i class="fas fa-edit white-text" ></i> Edit
+        </a>-->
+
+        <!-- delete product button -->
+       <!-- <a (click)="deleteProduct(product.id)" class='btn btn-danger'>
+          <i class="fas fa-trash-alt white-text" ></i> Delete
+        </a>-->
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

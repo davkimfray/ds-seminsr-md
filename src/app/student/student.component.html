@@ -1,0 +1,77 @@
+<app-avbar></app-avbar>
+<div class="container card-group " >
+<a class="btn" (click)="logout()">LogOut</a>
+</div>
+
+<!--Accordion wrapper-->
+<div class="container accordion md-accordion" aria-multiselectable="false">
+
+  <!-- Accordion card -->
+  <div class="card ">
+
+    <!-- Card header -->
+    <div class="card-header z-depth-1" role="button" id="headingOne1" mdbWavesEffect>
+      <a  (click)="profileToggle()">
+        <h5 class="mb-0 font-weight-bold">
+          <mdb-icon fas icon="user" class="mr-1"></mdb-icon> Profile
+          <i *ngIf="isProfile; else noProfile" class="fas fa-angle-up rotate-icon float-right"></i>
+          <ng-template #noProfile>
+            <i class="fas fa-angle-down rotate-icon float-right"></i>
+          </ng-template>
+        </h5>
+      </a>
+    </div>
+
+    <!-- Card body -->
+    <div >
+      <div class="card-body animated fadeInDown" *ngIf="isProfile">
+        <app-profile></app-profile>
+      </div>
+    </div>
+
+  </div>
+  <!-- Accordion card -->
+
+  <!-- Accordion card -->
+  <div class="card" *ngFor="let seminar of seminars | async ">
+
+    <!-- Card header -->
+    <div class="card-header z-depth-1" role="button" mdbWavesEffect>
+      <a (click)="seminarToggle(seminar.cou_name)">
+        <h5 class="mb-0 font-weight-bold">
+          <mdb-icon fas icon="table" class="mr-1"></mdb-icon> {{seminar.cou_name}} Seminar
+          <i  *ngIf="seminar.cou_name != selectedCourse" class="fas fa-angle-down animated  float-right" ></i>
+        </h5>
+      </a>
+    </div>
+
+    <!-- Card body -->
+      <div class="card-body " *ngIf="seminar.cou_name == selectedCourse" >
+        <app-seminar [seminar]="seminar"></app-seminar>
+      </div>
+  </div>
+  <!-- Accordion card -->
+
+  <!-- Register Seminar -->
+  <div class="card" >
+
+    <!-- Card header -->
+    <div class="card-header z-depth-1" role="button" mdbWavesEffect>
+      <a (click)="openRegisterSeminar()">
+        <h5 class="mb-0 font-weight-bold">
+          <mdb-icon fas icon="table" class="mr-1"></mdb-icon> Register Seminar
+          <i class="fas fa-plus animated  float-right" ></i>
+        </h5>
+      </a>
+    </div>
+
+    <!-- Card body -->
+    <!--<div class="card-body animated fadeInDown" *ngIf="isSeminar" >
+      <app-seminar [element]="element"></app-seminar>
+    </div>-->
+  </div>
+  <!-- Accordion card -->
+
+</div>
+<!-- Accordion wrapper -->
+

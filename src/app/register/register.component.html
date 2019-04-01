@@ -1,0 +1,159 @@
+<!--Main Navigation-->
+<body class=" inro-2">
+<div class="full-bg-img mask rgba-gradient">
+  <div class="container flex-center ">
+    <div class="flex align-items-center content-height w-100">
+      <div class="row head w-100   white-text">
+        <span class="heading text-center"><img src="../../assets/images/udsm_logo.png" width="20%">University of Dar es salaam</span>
+      </div>
+
+      <div  class="row flex-center w-100">
+
+
+
+<div class="">
+    <!--Form-->
+    <div class="card fadeInRight">
+      <div class="card-body">
+        <!--Header-->
+        <div class="text-center">
+          <h3 class=" fadeInLeft white-text"><i class="fas fa-user-plus white-text" style="padding-right: 20px"></i> Register For Seminar!
+          <button mdbBtn class="" color="default" rounded="true" (click)="openlogin()" mdbWavesEffect>Login</button>
+          </h3>
+          <hr class="hr-light">
+        </div>
+
+        <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+        <!--Body-->
+        <div class="row flex-center">
+          <div class="md-form white-text form-group">
+            <input type="text" id="regNo" mdbValidate formControlName="regNo"
+                   [ngClass]="{ 'is-invalid': submitted && f.regNo.errors }" class="form-control white-text"
+                   mdbInput>
+            <label for="regNo" class="white-text">Registration No:</label>
+            <div *ngIf="submitted && f.regNo.errors" class="invalid-feedback text-center">
+              <div *ngIf="f.regNo.errors.required">RegNo is required</div>
+            </div>
+          </div>
+            <div class="md-form white-text form-group">
+                <select (change)="getCourses()" class="browser-default custom-select" formControlName="college"
+                         [ngClass]="{ 'is-invalid': submitted && f.college.errors }">
+                  <option value="" disabled selected hidden>Select College:</option>
+                  <option *ngFor="let col of colleges | async" [value]="col.collegeId">{{col.col_name}}</option>
+                </select>
+              <div *ngIf="submitted && f.college.errors" class="invalid-feedback text-center">
+                <div *ngIf="f.college.errors.required">College is required</div>
+              </div>
+            </div>
+           <!-- <div class="md-form white-text form-group">
+              <select class="browser-default custom-select" formControlName="course" required
+                      [ngClass]="{ 'is-invalid': submitted && f.course.errors }">
+                <option value="" disabled selected hidden>Select Course:</option>
+                <option *ngFor="let col of colleges | async" [value]="col.collegeId">{{col.col_name}}</option>
+              </select>
+              <div *ngIf="submitted && f.course.errors" class="invalid-feedback text-center">
+                <div *ngIf="f.course.errors.required">Course is required</div>
+              </div>
+            </div>-->
+          </div>
+        <div class="row flex-center form-group">
+        <div class="md-form white-text">
+            <input type="text" id="surName" mdbValidate formControlName="surName"
+                   [ngClass]="{ 'is-invalid': submitted && f.surName.errors }" class="form-control white-text"
+                   mdbInput>
+            <label for="surName" class="white-text">Surname</label>
+          <div *ngIf="submitted && f.surName.errors" class="invalid-feedback text-center">
+            <div *ngIf="f.surName.errors.required">Surname is required</div>
+          </div>
+          </div>
+
+          <div class="md-form white-text form-group">
+            <input type="text" id="firstName" mdbValidate formControlName="firstName"
+                   [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" class="form-control white-text"
+                   mdbInput>
+            <label for="firstName" class="white-text">Firstname</label>
+            <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback text-center">
+              <div *ngIf="f.firstName.errors.required">Firstname is required</div>
+            </div>
+          </div>
+
+          <div class="md-form white-text form-group">
+            <input type="text" id="midName" mdbValidate formControlName="midName" class="form-control white-text"
+                   mdbInput>
+            <label for="midName" class="white-text">Middle name</label>
+            <div *ngIf="submitted && f.midName.errors" class="invalid-feedback text-center">
+              <div *ngIf="f.midName.errors.required">Middle name is required</div>
+            </div>
+          </div>
+        </div>
+        <div class="row white-text flex-center">
+          <div class="custom-control custom-radio custom-control-inline white-text form-group">
+          Gender:
+          </div>
+          <div class="custom-control custom-radio custom-control-inline white-text form-group">
+            <input type="radio" class="custom-control-input" id="male" formControlName="gender" value="Male">
+            <label class="custom-control-label" for="male">Male</label>
+          </div>
+          <div class="custom-control custom-radio custom-control-inline white-text form-group">
+            <input type="radio" class="custom-control-input" id="female" formControlName="gender" value="Female">
+            <label class="custom-control-label" for="female">Female</label>
+          </div>
+          <div *ngIf="submitted && f.gender.errors" class="invalid-feedback text-center">
+            <div *ngIf="f.gender.errors.required">Gender is required</div>
+          </div>
+        </div>
+
+        <div class="row flex-center">
+          <div class="md-form white-text form-group">
+            <input type="text" id="username" mdbValidate formControlName="username"
+                   [ngClass]="{ 'is-invalid': submitted && f.username.errors }" class="form-control white-text"
+                   mdbInput>
+            <label for="username" class="white-text">Username</label>
+            <div *ngIf="submitted && f.username.errors" class="invalid-feedback text-center">
+              <div *ngIf="f.username.errors.required">Username is required</div>
+            </div>
+          </div>
+          &nbsp;
+          <div class="md-form white-text form-group">
+            <input type="password" id="password" mdbValidate formControlName="password"
+                   [ngClass]="{ 'is-invalid': submitted && f.password.errors }"  class="form-control white-text"
+                   mdbInput>
+            <label for="password" class="white-text">Password</label>
+            <div *ngIf="submitted && f.password.errors" class="invalid-feedback text-center">
+              <div *ngIf="f.password.errors.required">Password is required</div>
+            </div>
+          </div>
+          <div class="md-form white-text form-group">
+            <input type="password" id="confirmPass" mdbValidate formControlName="confirmPass"
+                   [ngClass]="{ 'is-invalid': submitted && f.confirmPass.errors }"  class="form-control white-text"
+                   mdbInput>
+            <label for="confirmPass" class="white-text">Confirm Password</label>
+            <div *ngIf="submitted && f.confirmPass.errors" class="invalid-feedback text-center">
+              <div *ngIf="f.confirmPass.errors.required">Confirm Password is required</div>
+            </div>
+          </div>
+        </div>
+
+
+
+          <div class="row flex-center">
+          <button mdbBtn class="form-control col-6 waves-light" rounded="true" color="default"
+                  mdbWavesEffect>Register</button>
+          </div>
+          <hr class="hr-light mb-3 mt-4">
+
+
+        </form>
+      </div>
+    </div>
+
+    <!--/.Form-->
+  </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+<!--Main Navigation-->

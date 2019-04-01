@@ -1,0 +1,110 @@
+/* You can add global styles to this file, and also import other style files */
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+@media (min-width: 768px) {
+  .view {
+    overflow: visible;
+    /*
+    margin-top: -50px;
+    */
+
+  }
+}
+.navbar {
+  z-index: 10;
+  font-family: "Lobster";
+}
+.navbar {
+  background-color: rgba(22, 81, 70, 0.9);
+}
+.top-nav-collapse {
+  background-color: rgba(22, 81, 70, 0.9);
+}
+@media only screen and (max-width: 768px) {
+  .navbar {
+    background-color: rgba(22, 81, 70, 0.9);
+  }
+  .carousel-caption {
+    margin-top: 30%;
+  }
+}
+
+.home-jumbotron {
+  border-radius: 20px;
+}
+
+
+
+
+
+
+/*login*/
+
+@media (max-width: 768px) {
+  .row .head {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  .intro-2 img{
+    width: 15%;
+  }
+  .heading {
+    font-size: 24px;
+  }
+}
+.rgba-gradient .full-bg-img {
+  background: linear-gradient(45deg, rgba(83, 125, 210, 0.4), rgba(178, 30, 123, 0.4) 100%);
+}
+.card {
+  background-color: rgba(229, 228, 255, 0.2);
+}
+
+.md-form .prefix {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+.md-form label {
+  color: #ffffff;
+}
+h6 {
+  line-height: 1.7;
+}
+@media (max-width: 740px) {
+    .full-height,
+    .full-height body,
+    .full-height header,
+    .full-height header,
+    body {
+      height: 100% !important;
+    }
+}
+@media (min-width: 740px) {
+  body {
+    height: 100vh !important;
+  }
+  .intro-2 img{
+    width: 25%;
+  }
+  .heading {
+    font-size: 40px;
+  }
+  .row .head {
+    margin-top: 3%;
+  }
+}
+
+.md-form {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+
+
+
+/*
+student nav*/
+

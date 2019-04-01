@@ -1,0 +1,93 @@
+/*
+.navbar-brand {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.navstyle {
+  font-size: 24px;
+}
+
+.active {
+  color: #000000;
+}
+header {
+  margin-bottom: 80px;
+}
+.navbar {
+  background-color: rgb(0, 193, 171);
+}
+.navbar-brand {
+  margin: -5px;
+}
+
+
+
+.student-nav-bg{
+  z-index: 10;
+  height: 100%;
+  background: url("../../assets/images/udsm.jpg")no-repeat center center;
+  background-position: left;
+}
+
+.student-nav {
+  background-color: rgba(0, 193, 171, 0.5);
+}
+*/
+
+
+
+
+
+
+.sidebar-fixed {
+  height: 100vh;
+  width: 270px;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  z-index: 1050;
+  padding: 1.5rem;
+  padding-top: 0;
+  background: url("../../../assets/images/udsm.jpg")no-repeat center center ;
+}
+.sidebar-fixed .list-group .active {
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+.sidebar-fixed .logo-wrapper {
+  padding: 2.5rem;}
+.sidebar-fixed .logo-wrapper img {
+  max-height: 100px; }
+
+@media (min-width: 1200px) {
+  .navbar,
+  .page-footer,
+  main {
+    padding-left: 270px; } }
+
+@media (max-width: 1199.98px) {
+  .sidebar-fixed {
+    display: none; } }
+@media (min-width: 1199.98px) {
+  .nav-item {
+    display: none;
+  }
+}
+.skin-color {
+  height: 100vh;
+width: 270px;
+  padding: 1.5rem;
+  margin-left: -1.5rem;
+  background-color: rgba(0, 193, 171, 0.3);
+
+
+}
+.list-group-item {
+  color: white;
+  background: transparent
+}
+.h4 {
+  margin-bottom: -20px;
+}

@@ -1,0 +1,42 @@
+<div class="row m-b-18px">
+  <div class="col-md-12">
+    <!-- button to create new product -->
+    <a (click)="createProduct()" class='btn btn-primary pull-right'>
+      <span class='glyphicon glyphicon-plus'></span> Create Product
+    </a>
+  </div>
+</div>
+
+<div class="container">
+  <table mdbTable hover="true">
+  <thead class="black white-text">
+  <tr>
+    <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+  </tr>
+  </thead>
+  <tbody>a
+  <tr mdbTableCol *ngFor="let el of elements">
+    <th scope="row">{{el.id}}</th>
+    <td>{{el.first}}</td>
+    <td>{{el.last}}</td>
+    <td>{{el.handle}}</td>
+    <td>
+      <!-- read one product button -->
+      <a (click)="readOneProduct(product.id)" class='btn btn-primary m-r-5px'>
+        <span class='glyphicon glyphicon-eye-open'></span> Read
+      </a>
+
+      <!-- edit product button -->
+      <a (click)="updateProduct(product.id)" class='btn btn-info m-r-5px'>
+        <span class='glyphicon glyphicon-edit'></span> Edit
+      </a>
+
+      <!-- delete product button -->
+      <a (click)="deleteProduct(product.id)" class='btn btn-danger m-r-5px'>
+        <span class='glyphicon glyphicon-remove'></span> Delete
+      </a>
+    </td>
+  </tr>
+  </tbody>
+</table>
+</div>
