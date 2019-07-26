@@ -1,25 +1,20 @@
-<!--<header >
-  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 
-  <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark scrolling-navbar fixed-top " [containerInside]="true">
+<header >
+
+
+  <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark scrolling-navbar fixed-top justify-content-between" [containerInside]="true">
     <mdb-navbar-brand>
-      <a class="logo navbar-brand h1" href="#">
-        <span><img src="../../assets/images/udsm_logo.png" width="23%" > Udsm</span>
+      <a class="logo navbar-brand " href="/">
+        <img src="../../assets/images/udsm_logo.png" width="15%" >
+          Ds Seminar Registration
       </a>
     </mdb-navbar-brand>
     <links>
-      <ul class="navbar-nav ml-auto " >
-
-        <li *ngFor="let item of navItem" class="nav-item waves-light" [class.active]="(item.act)" mdbWavesEffect >
-           <a class="nav-link" routerLink="/{{item.item}}" routerLinkActive="active">
-             <mdb-icon fas icon="{{item.icn}}" class="left"></mdb-icon> <span class="navstyle">  {{item.item}}</span>
-           &lt;!&ndash; <span class="sr-only">(current)</span>&ndash;&gt;
-          </a>
-       </ul>
+      <a class="h5 white-text my-0" (click)="logout()">
+        <mdb-icon fas icon="exclamation" class="mr-1"></mdb-icon>LogOut</a>
     </links>
-
   </mdb-navbar>
-  &lt;!&ndash; Main &ndash;&gt;
+ <!-- &lt;!&ndash; Main &ndash;&gt;
   &lt;!&ndash;<div class="view intro-2" style="">
     <mdb-carousel class="carousel slide carousel-fade " [animation]="'fade'" >
 
@@ -145,14 +140,15 @@
 </mdb-side-nav>
 &ndash;&gt;
 &lt;!&ndash;/. Sidebar navigation &ndash;&gt;
-</header>-->
+</header>
 
 
+&lt;!&ndash;
 
-<!--Main Navigation-->
+&lt;!&ndash;Main Navigation&ndash;&gt;
 <header>
 
-  <!-- Sidebar -->
+  &lt;!&ndash; Sidebar &ndash;&gt;
   <div class="sidebar-fixed position-fixed skin-image ">
     <div class="skin-color">
     <a class="logo-wrapper waves-effect">
@@ -167,33 +163,33 @@
         <mdb-icon fas icon="user" class="mr-3"></mdb-icon>Profile</a>
       <a (click)="setSelectedPage('seminar')"  class="list-group-item list-group-item-action white-text waves-effect">
         <mdb-icon fas icon="table" class="mr-3"></mdb-icon>Seminars</a>
-      <a routerLink="nonExistingPath" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
+      <a routerLink="nonExistingPath" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect" (click)="logout()">
         <mdb-icon fas icon="exclamation" class="mr-3"></mdb-icon>LogOut</a>
       <a></a>
 
     </div>
     </div>
   </div>
-  <!-- Sidebar -->
+  &lt;!&ndash; Sidebar &ndash;&gt;
 
-  <!--Navbar-->
+  &lt;!&ndash;Navbar&ndash;&gt;
   <mdb-navbar [containerInside]="false" SideClass="navbar navbar-expand-lg  navbar-dark fixed-top">
 
-    <!-- Navbar brand -->
+    &lt;!&ndash; Navbar brand &ndash;&gt;
     <logo class="ml-3 ">
       <a class="navbar-brand " href="https://mdbootstrap.com/angular/angular-bootstrap-getting-started/">
         <strong class="white-text">DS Registration</strong>
       </a>
     </logo>
 
-    <!-- Collapsible content -->
+    &lt;!&ndash; Collapsible content &ndash;&gt;
     <links>
 
-      <!-- Links -->
+      &lt;!&ndash; Links &ndash;&gt;
 
-      <!-- Links -->
+      &lt;!&ndash; Links &ndash;&gt;
 
-      <!-- Search form -->
+      &lt;!&ndash; Search form &ndash;&gt;
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
           <a href="https://github.com/mdbootstrap/bootstrap-material-design" class="nav-link "
@@ -222,10 +218,51 @@
         </li>
       </ul>
     </links>
-    <!-- Collapsible content -->
+    &lt;!&ndash; Collapsible content &ndash;&gt;
 
   </mdb-navbar>
-  <!--/.Navbar-->
+  &lt;!&ndash;/.Navbar&ndash;&gt;
 
 </header>
-<!--Main Navigation-->
+&lt;!&ndash;Main Navigation&ndash;&gt;
+&ndash;&gt;
+-->
+
+
+
+<!--
+
+&lt;!&ndash;Navbar &ndash;&gt;
+<nav class="mb-1 navbar navbar-expand-lg navbar-dark orange lighten-1">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
+          aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto nav-flex-icons">
+      <li class="nav-item avatar">
+        <a class="nav-link p-0" >
+          <mdb-icon fas icon="exclamation" class="mr-1"></mdb-icon>LogOut
+        </a>
+
+      </li>
+    </ul>
+  </div>
+</nav>
+&lt;!&ndash;/.Navbar &ndash;&gt;
+-->
+</header>

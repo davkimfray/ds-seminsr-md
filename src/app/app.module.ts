@@ -21,6 +21,40 @@ import { ProfileComponent } from './student/profile/profile.component';
 import { SeminarComponent } from './student/seminar/seminar.component';
 import { StudentComponent } from './student/student.component';
 import { RegisterSeminarComponent } from './student/register-seminar/register-seminar.component';
+import { JwtModule } from '@auth0/angular-jwt';
+import { TeacherComponent } from './teacher/teacher.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { ViewStudentComponent } from './view-student/view-student.component';
+import {
+  MatAutocompleteModule,
+  MatButtonModule,
+  MatButtonToggleModule,
+  MatCardModule, MatCheckboxModule,
+  MatChipsModule, MatDatepickerModule,
+  MatDialogModule,
+  MatFormFieldModule,
+  MatGridListModule,
+  MatIconModule, MatInputModule,
+  MatListModule,
+  MatMenuModule,
+  MatPaginatorModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule, MatRadioModule,
+  MatSelectModule,
+  MatSidenavModule,
+  MatSliderModule,
+  MatSlideToggleModule,
+  MatSnackBarModule,
+  MatSortModule,
+  MatStepperModule,
+  MatTableModule,
+  MatTabsModule,
+  MatToolbarModule,
+  MatTooltipModule
+} from '@angular/material';
+import { StudentDetailsComponent } from './student-details/student-details.component';
+import {NavComponent} from './teacher/nav/nav.component';
+import { TeacherSidenavComponent } from './teacher/teacher-sidenav/teacher-sidenav.component';
 
 @NgModule({
   declarations: [
@@ -38,15 +72,58 @@ import { RegisterSeminarComponent } from './student/register-seminar/register-se
     SeminarComponent,
     StudentComponent,
     RegisterSeminarComponent,
+    TeacherComponent,
+    ViewStudentComponent,
+    StudentDetailsComponent,
+    NavComponent,
+    TeacherSidenavComponent,
     ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MDBBootstrapModule.forRoot(),
-    FormsModule,
+    // FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
+    MatCheckboxModule,
+    MatButtonModule,
+    MatInputModule,
+    MatAutocompleteModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatRadioModule,
+    MatSelectModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatListModule,
+    MatGridListModule,
+    MatCardModule,
+    MatStepperModule,
+    MatTabsModule,
+    MatExpansionModule,
+    MatButtonToggleModule,
+    MatChipsModule,
+    MatIconModule,
+    MatProgressSpinnerModule,
+    MatProgressBarModule,
+    MatDialogModule,
+    MatTooltipModule,
+    MatSnackBarModule,
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: function  tokenGetter() {
+          return     localStorage.getItem('access_token'); },
+        whitelistedDomains: ['localhost:3000', '41.86.177.133:3000'],
+        blacklistedRoutes: ['http://localhost:3000/login']
+      }
+    })
   ],
   entryComponents: [ RegisterSeminarComponent ],
   providers: [],
@@ -54,3 +131,5 @@ import { RegisterSeminarComponent } from './student/register-seminar/register-se
   schemas: [ NO_ERRORS_SCHEMA ]
 })
 export class AppModule { }
+
+

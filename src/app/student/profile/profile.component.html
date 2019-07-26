@@ -1,53 +1,41 @@
-<!-- Card -->
 
-  <!-- Card image -->
+
+<!--
+personal info
+-->
   <div class="row">
     <div class="col-md-4 text-center user">
       <mdb-icon fas icon="user" class="user-icon flex-center "></mdb-icon>
-         <span class=" h5">Reg No: </span>2016-04-00x00
+         <span class=" h5">Reg No: </span>{{currentUser.reg_no}}
     </div>
 
     <div class=" col-md-8 ">
       <div class="row">
         <span class="col-md-6 ">
-          <span class="h5">Surname: </span>2016-04-00x00
+          <span class="h5">Surname: </span>{{currentUser.l_name}}
         </span>
         <span class="col-md-6 ">
-          <span class="h5">Firstname: </span>2016-04-00x00
+          <span class="h5">Firstname: </span>{{currentUser.f_name}}
         </span>
       </div>
       <div class="row">
         <span class="col-md-6">
-          <span class="h5">Middle Name: </span>2016-04-00x00
+          <span class="h5">Middle Name: </span>{{currentUser.m_name}}
         </span>
         <span class="col-md-6">
-          <span class="h5">Gender: </span>Male
+          <span class="h5">Gender: </span>{{currentUser.gender}}
         </span>
       </div>
       <div class="row">
         <span class="col-md-6">
-          <span class="h5">College: </span>2016-04-00x00
+          <span class="h5">College: </span>{{currentUser.col_name}}
         </span>
-        <span class="col-md-6">
-          <span class="h5">Firstname: </span>2016-04-00x00
-        </span>
-      </div>
-      <div class="row">
-        <span class="col-md-6">
-          <span class="h5">Surname: </span>2016-04-00x00
-        </span>
-        <span class="col-md-6">
-          <span class="h5">Firstname: </span>2016-04-00x00
-        </span>
+        <!-- edit product button -->
+     <!--   <a (click)="updateProduct(product.id)" class='col-md-6 btn btn-info'>
+          <i class="fas fa-edit white-text " ></i> Edit
+        </a>-->
       </div>
     </div>
   </div>
-  <!-- Card content -->
-  <div class="card-body flex-center">
-    <!-- edit product button -->
-     <a (click)="updateProduct(product.id)" class='col-md-4 btn btn-info'>
-       <i class="fas fa-edit white-text " ></i> Edit
-     </a>
-  </div>
 
-<!-- Card -->
+

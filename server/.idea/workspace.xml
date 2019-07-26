@@ -1,7 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6a7b1e87-221b-4a87-bf53-2d022a538e0c" name="Default Changelist" comment="" />
+    <list default="true" id="6a7b1e87-221b-4a87-bf53-2d022a538e0c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../src/app/service/student.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/app/teacher/nav/nav.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/app/teacher/nav/nav.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/app/teacher/nav/nav.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/app/teacher/nav/nav.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/app/auth.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/auth.guard.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/app/helpers/error.interceptor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/helpers/error.interceptor.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/app/helpers/jwt.interceptor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/helpers/jwt.interceptor.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/app/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/login/login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/app/login/login.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/login/login.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/app/make-order/make-order.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/make-order/make-order.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/app/register/register.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/register/register.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/app/register/register.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/register/register.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/app/register/register.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/register/register.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/app/service/authentication.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/service/authentication.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/app/service/backend-config.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/service/backend-config.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/app/service/course.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/service/course.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/app/service/seminars.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/service/seminars.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/app/student.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/service/student.service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/app/student.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/app/student/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/student/home/home.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/app/student/navbar/navbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/student/navbar/navbar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/app/student/navbar/navbar.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/student/navbar/navbar.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/app/student/navbar/navbar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/student/navbar/navbar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/app/student/profile/profile.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/student/profile/profile.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/app/student/profile/profile.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/student/profile/profile.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/app/student/profile/profile.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/student/profile/profile.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/app/student/register-seminar/register-seminar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/student/register-seminar/register-seminar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/app/student/register-seminar/register-seminar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/student/register-seminar/register-seminar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/app/student/seminar/seminar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/student/seminar/seminar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/app/student/seminar/seminar.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/student/seminar/seminar.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/app/student/seminar/seminar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/student/seminar/seminar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/app/student/student.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/student/student.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/app/student/student.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/student/student.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/app/student/student.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/student/student.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/app/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/user.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../src/styles.scss" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -13,22 +61,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="23">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
               <folding>
-                <marker date="1554146514851" expanded="true" signature="3392:3915" ph="..." />
+                <marker date="1560604942362" expanded="true" signature="3378:3919" ph="..." />
               </folding>
             </state>
           </provider>
@@ -37,8 +76,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/node_modules/mysql/lib/Connection.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2070">
-              <caret line="90" column="27" selection-start-line="90" selection-start-column="27" selection-end-line="90" selection-end-column="27" />
+            <state relative-caret-position="11523">
+              <caret line="501" column="9" selection-start-line="501" selection-start-column="9" selection-end-line="501" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -62,9 +101,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1440" />
-    <option name="width" value="915" />
-    <option name="height" value="372" />
+    <option name="width" value="1600" />
+    <option name="height" value="865" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -72,7 +110,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -90,6 +127,22 @@
               <item name="server" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="server" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="server" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="server" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -159,30 +212,64 @@
       <workItem from="1554137142493" duration="7316000" />
       <workItem from="1554138770533" duration="1211000" />
       <workItem from="1554135946838" duration="752000" />
-      <workItem from="1554136114599" duration="2886000" />
+      <workItem from="1554136114599" duration="5124000" />
+      <workItem from="1554312858021" duration="4143000" />
+      <workItem from="1554459067483" duration="6601000" />
+      <workItem from="1554467158931" duration="11749000" />
+      <workItem from="1554533281326" duration="259000" />
+      <workItem from="1554533658236" duration="1631000" />
+      <workItem from="1554487903445" duration="9954000" />
+      <workItem from="1554584447020" duration="1115000" />
+      <workItem from="1554605407498" duration="3640000" />
+      <workItem from="1554496563322" duration="975000" />
+      <workItem from="1554745165811" duration="712000" />
+      <workItem from="1554906123106" duration="1097000" />
+      <workItem from="1554918598629" duration="627000" />
+      <workItem from="1554930206453" duration="609000" />
+      <workItem from="1554924113769" duration="49000" />
+      <workItem from="1554998508040" duration="1070000" />
+      <workItem from="1555432091240" duration="1171000" />
+      <workItem from="1555432077884" duration="1487000" />
+      <workItem from="1555884587779" duration="1122000" />
+      <workItem from="1556039336743" duration="748000" />
+      <workItem from="1556231806037" duration="442000" />
+      <workItem from="1556282452320" duration="716000" />
+      <workItem from="1556290037803" duration="615000" />
+      <workItem from="1557821791279" duration="624000" />
+      <workItem from="1560604782294" duration="824000" />
+      <workItem from="1560810238477" duration="1200000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71037000" />
+    <option name="totallyTimeSpent" value="126455000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1600" y="0" width="1024" height="768" extended-state="6" />
+    <frame x="0" y="0" width="1366" height="733" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1928072" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17051378" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info id="DB Browser" order="3" />
+      <window_info id="DB Browser" order="3" weight="0.32867134" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" weight="0.46489564" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49964464" weight="0.39848197" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32951945" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.4890614" visible="true" weight="0.3576052" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.4890614" visible="true" weight="0.2161235" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5109386" side_tool="true" weight="0.30851063" />
       <window_info anchor="bottom" id="DB Execution Console" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -227,25 +314,156 @@
         </state>
       </provider>
     </entry>
+    <entry file="db://e006e3a9-e8a8-4533-ae1f-5e470c4b087b/objects/schemas/seminar/tables/seminars">
+      <provider selected="true" editor-type-id="1.DATA">
+        <state row-count="3" readonly="false">
+          <columns>
+            <column name="seminarId" position="0" visible="true" />
+            <column name="courseId" position="1" visible="true" />
+            <column name="day" position="2" visible="true" />
+            <column name="hour" position="3" visible="true" />
+            <column name="no_of_student" position="4" visible="true" />
+            <column name="teacherId" position="5" visible="true" />
+            <column name="venueId" position="6" visible="true" />
+          </columns>
+          <sorting />
+          <content-types />
+        </state>
+      </provider>
+    </entry>
+    <entry file="db://e006e3a9-e8a8-4533-ae1f-5e470c4b087b/objects/schemas/seminar/tables/student">
+      <provider selected="true" editor-type-id="1.DATA">
+        <state row-count="3" readonly="false">
+          <columns>
+            <column name="studentId" position="0" visible="true" />
+            <column name="f_name" position="1" visible="true" />
+            <column name="l_name" position="2" visible="true" />
+            <column name="m_name" position="3" visible="true" />
+            <column name="gender" position="4" visible="true" />
+            <column name="reg_no" position="5" visible="true" />
+            <column name="courseId" position="6" visible="true" />
+            <column name="collegeId" position="7" visible="true" />
+            <column name="username" position="8" visible="true" />
+            <column name="password" position="9" visible="true" />
+          </columns>
+          <sorting />
+          <content-types />
+        </state>
+      </provider>
+    </entry>
+    <entry file="db://e006e3a9-e8a8-4533-ae1f-5e470c4b087b/objects/schemas/seminar/tables/college">
+      <provider selected="true" editor-type-id="1.DATA">
+        <state row-count="5" readonly="false">
+          <columns>
+            <column name="collegeId" position="0" visible="true" />
+            <column name="col_name" position="1" visible="true" />
+          </columns>
+          <sorting />
+          <content-types />
+        </state>
+      </provider>
+    </entry>
+    <entry file="db://e006e3a9-e8a8-4533-ae1f-5e470c4b087b/objects/schemas/seminar/tables/course">
+      <provider selected="true" editor-type-id="1.DATA">
+        <state row-count="2" readonly="false">
+          <columns>
+            <column name="courseId" position="0" visible="true" />
+            <column name="cou_name" position="1" visible="true" />
+            <column name="semister" position="2" visible="true" />
+            <column name="year" position="3" visible="true" />
+            <column name="proglevId" position="4" visible="true" />
+          </columns>
+          <sorting />
+          <content-types />
+        </state>
+      </provider>
+    </entry>
+    <entry file="db://e006e3a9-e8a8-4533-ae1f-5e470c4b087b/objects/schemas/seminar/tables/teacher">
+      <provider selected="true" editor-type-id="1.DATA">
+        <state row-count="1" readonly="false">
+          <columns>
+            <column name="teacherId" position="0" visible="true" />
+            <column name="reg_no" position="1" visible="true" />
+            <column name="f_name" position="2" visible="true" />
+            <column name="m_name" position="3" visible="true" />
+            <column name="l_name" position="4" visible="true" />
+            <column name="gender" position="5" visible="true" />
+          </columns>
+          <sorting />
+          <content-types />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="db://e006e3a9-e8a8-4533-ae1f-5e470c4b087b/objects/schemas/seminar/tables/stu_sem_reg">
+      <provider selected="true" editor-type-id="1.DATA">
+        <state row-count="1" readonly="false">
+          <columns>
+            <column name="ID" position="0" visible="true" />
+            <column name="seminarId" position="1" visible="true" />
+            <column name="studentId" position="2" visible="true" />
+            <column name="courseEnded" position="3" visible="true" />
+          </columns>
+          <sorting />
+          <content-types />
+        </state>
+      </provider>
+    </entry>
+    <entry file="db://e006e3a9-e8a8-4533-ae1f-5e470c4b087b/objects/schemas/seminar/tables/prog_level">
+      <provider selected="true" editor-type-id="1.DATA">
+        <state row-count="2" readonly="false">
+          <columns>
+            <column name="proglevId" position="0" visible="true" />
+            <column name="prog_name" position="1" visible="true" />
+          </columns>
+          <sorting />
+          <content-types />
+        </state>
+      </provider>
+    </entry>
+    <entry file="db://e006e3a9-e8a8-4533-ae1f-5e470c4b087b/objects/schemas/seminar/tables/login">
+      <provider selected="true" editor-type-id="1.DATA">
+        <state row-count="2" readonly="false">
+          <columns>
+            <column name="userId" position="0" visible="true" />
+            <column name="username" position="1" visible="true" />
+            <column name="password" position="2" visible="true" />
+            <column name="studentId" position="3" visible="true" />
+            <column name="teacherId" position="4" visible="true" />
+          </columns>
+          <sorting />
+          <content-types />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/bcryptjs/dist/bcrypt.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="264" column="18" selection-start-line="264" selection-start-column="18" selection-end-line="264" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <marker date="1560604942362" expanded="true" signature="3378:3919" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/server/node_modules/mysql/lib/Connection.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2070">
-          <caret line="90" column="27" selection-start-line="90" selection-start-column="27" selection-end-line="90" selection-end-column="27" />
+        <state relative-caret-position="11523">
+          <caret line="501" column="9" selection-start-line="501" selection-start-column="9" selection-end-line="501" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/routes/users.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <marker date="1554146514851" expanded="true" signature="3392:3915" ph="..." />
-          </folding>
-        </state>
-      </provider>
     </entry>
   </component>
 </project>

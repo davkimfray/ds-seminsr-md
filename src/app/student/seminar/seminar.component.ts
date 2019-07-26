@@ -18,6 +18,26 @@ export class SeminarComponent implements OnInit {
 
   headElements = ['ID', 'Course', 'Day', 'Time', 'Capacity', 'Venue', 'Lecturer', 'Register'];
 
+  public chartType = 'pie';
+
+  public chartDatasets: Array<any> = [
+    {data: [18, 13, 4, 5], label: 'My First dataset'}
+  ];
+
+  public chartLabels: Array<any> = ['Test', 'Essay', 'Attendance', 'Lost'];
+
+  public chartColors: Array<any> = [
+    {
+      backgroundColor: ['#F7464A', '#46BFBD', '#FDB45C', '#949FB1'],
+      hoverBackgroundColor: ['#FF5A5E', '#5AD3D1', '#FFC870', '#A8B3C5'],
+      borderWidth: 2,
+    }
+  ];
+
+  public chartOptions: any = {
+    responsive: true
+  };
+
 
   constructor(private router: Router) {
   }

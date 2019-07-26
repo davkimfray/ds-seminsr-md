@@ -6,8 +6,6 @@ export class User {
   surName: string;
   gender: string;
   college: number;
-  course: number;
-  username: string;
   password: string;
-  token: string;
+  access_token: string;
 }

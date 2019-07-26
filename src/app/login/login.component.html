@@ -7,7 +7,7 @@
         <span class="heading text-center"><img src="../../assets/images/udsm_logo.png" width="20%">University of Dar es salaam</span>
       </div>
 
-      <div class="row flex-center w-100">
+      <div class="row center-page flex-center w-100">
         <div class="col-md-4 text-center text-md-left mb-5">
           <div class="white-text">
             <h2 class="h1 h1-responsive font-bold wow fadeInLeft" data-wow-delay="0.3s">Ds Seminar Registration! </h2>
@@ -24,16 +24,18 @@
           </div>
         </div>
 
-        <div class="col-md-6 col-xl-5 offset-xl-1">
+        <div class="col-md-6 col-xl-4 offset-xl-1">
           <!--Form-->
           <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
           <div class="card wow fadeInRight" data-wow-delay="0.3s">
             <div class="card-body">
-              <br>
               <!--Header-->
               <div class="text-center">
-                <h3 class="white-text"><i class="fas fa-user white-text" style="padding-right: 20px"></i> Login:</h3>
+                <h3 class="white-text">Login</h3>
                 <hr class="hr-light">
+              </div>
+              <div *ngIf="alert" class="alert alert-danger" role="alert">
+                Incorrect Username or Password!
               </div>
 
               <!--Body-->
@@ -44,7 +46,7 @@
                        mdbInput>
                 <label for="form3" class="white-text">Username</label>
                 <div *ngIf="submitted && f.username.errors" class="invalid-feedback text-center">
-                  <div *ngIf="f.username.errors.required">Username is required</div>
+                  <div *ngIf="f.username.errors.required" style="margin-bottom: -20px">Username is required</div>
                 </div>
               </div>
 
@@ -55,7 +57,7 @@
                        mdbInput>
                 <label for="form4" class="white-text">Password</label>
                 <div *ngIf="submitted && f.password.errors" class="invalid-feedback text-center">
-                  <div *ngIf="f.password.errors.required">Password is required</div>
+                  <div *ngIf="f.password.errors.required" style="margin-bottom: -20px">Password is required</div>
                 </div>
                </div>
 
@@ -70,10 +72,6 @@
                   <div *ngIf="loading" class="loader-body">
                     <div class="loader "></div>
                   </div>
-                <div *ngIf="alert" class="alert alert-danger" role="alert">
-                  Incorrect Username or Password!
-                </div>
-
 
                 <hr class="hr-light mb-3 mt-4">
 
@@ -81,7 +79,6 @@
                   <a class="forgot-pas" mdbWavesEffect> <u>Forgot Password! </u></a>
                 </div>
               </div>
-              <br>
             </div>
           </div>
           </form>

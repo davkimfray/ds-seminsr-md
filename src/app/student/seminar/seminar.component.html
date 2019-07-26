@@ -63,4 +63,48 @@
           <span class="h5">Lecturer: </span>{{seminar.f_name }}
         </span>
   </div>
+
+
+
+  <!--
+    results data
+  -->
+  <div class="row " style="padding: 20px 0px 0px 20px; color: #00c851">
+    <div class="col-md-4 h5 ">
+        <span><mdb-icon fas icon="user"></mdb-icon>
+        COURSE WORK</span>
+    </div>
+  </div>
+
+
+  <div class="row" style="padding-left: 20px;">
+
+    <div class=" col-md-4 ">
+        <span class="row">
+          <span class="h5">Test: </span>{{seminar.l_name}}
+        </span>
+      <span class="row">
+        <span class="h5">Participation: </span>{{seminar.f_name}}
+        </span>
+    </div>
+    <div class=" col-md-4">
+                   <span class="row">
+          <span class="h5">Timed Essay: </span>{{seminar.m_name}}
+        </span>
+      <span class="row">
+            <span class="h5">Total(CA): </span>{{seminar.gender}}
+        </span>
+    </div>
+      <div style="display: block">
+        <canvas mdbChart
+                [chartType]="chartType"
+                [datasets]="chartDatasets"
+                [labels]="chartLabels"
+                [colors]="chartColors"
+                [options]="chartOptions"
+                [legend]="true">
+        </canvas>
+      </div>
+  </div>
+
 </div>

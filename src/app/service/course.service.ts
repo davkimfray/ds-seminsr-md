@@ -15,8 +15,8 @@ export class CourseService {
     return this.http.get(`${this.backend.server_url}/course`);
   }
 
-  getById(id: number) {
-    let params = new HttpParams().set('couYear', id);
+  getById(id: string) {
+    const params = new HttpParams().set('couYear', id);
     return this.http.get(`${this.backend.server_url}/course/id`, {params});
   }
 

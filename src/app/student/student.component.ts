@@ -9,6 +9,7 @@ import {MDBModalRef, MDBModalService} from 'angular-bootstrap-md';
 import {RegisterSeminarComponent} from './register-seminar/register-seminar.component';
 import {User} from '../user';
 import {AuthenticationService} from '../service/authentication.service';
+import {StudentService} from '../service/student.service';
 
 @Component({
   selector: 'app-student',
@@ -17,7 +18,6 @@ import {AuthenticationService} from '../service/authentication.service';
 })
 export class StudentComponent implements OnInit {
   // variable for modal component
-  modalRef: MDBModalRef;
   currentUser: User;
 
   seminars: Observable<any>;
@@ -25,7 +25,7 @@ export class StudentComponent implements OnInit {
   // state: string;
   prostate = 'default';
   selectedCourse: string;
-  userInfo: Observable<any>;
+  isRegisterSeminar = false;
   public isProfile = true;
 
   profileSelected;
@@ -34,37 +34,36 @@ export class StudentComponent implements OnInit {
   constructor(private nav: StudentNavigationService,
               private router: Router,
               private seminar: SeminarsService,
-              private modalService: MDBModalService,
-              private authenticationService: AuthenticationService
-              ) {
-    this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
-    console.log(this.authenticationService.currentUser.subscribe(x => this.currentUser = x));
-    console.log(this.nav.selectedPage);
+              private authenticationService: AuthenticationService) {
+   // this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
+
+    this.authenticationService.isLoggedIn();
+    this.currentUser = JSON.parse(localStorage.getItem('user'));
+
     this.fetchSeminarData();
   }
-
-  logout() {
-    this.authenticationService.logout();
-    this.router.navigate(['/login']);
-  }
-
   // calling the modal service
   // opening RegisterSeminarComponent component
   openRegisterSeminar() {
-    this.modalRef = this.modalService.show(RegisterSeminarComponent, {
+    if (this.isRegisterSeminar === true) {
+      this.isRegisterSeminar = false;
+    } else {
+      this.isRegisterSeminar = true;
+    }
+    /*this.modalRef = this.modalService.show(RegisterSeminarComponent, {
       backdrop: true,
       keyboard: false,
       focus: true,
       show: false,
       ignoreBackdropClick: true,
-      class: 'modal-center modal-lg',
+      class: 'modal-dialog modal-dialog-scrollable modal-center modal-lg',
       containerClass: 'right',
       animated: true
-    });
+    });*/
   }
 
   profileToggle() {
-    if (this.isProfile == true) {
+    if (this.isProfile === true) {
       this.prostate = (this.prostate === 'default' ? 'rotated' : 'default');
       this.isProfile = false;
     } else {
@@ -78,11 +77,11 @@ export class StudentComponent implements OnInit {
    }
 
   fetchSeminarData() {
-    this.seminars = this.seminar.semiarData();
+    this.seminars = this.seminar.getByStudentId(this.currentUser[0].studentId);
   }
 
   ngOnInit() {
-    if (this.nav.selectedPage == 'profile') {
+    if (this.nav.selectedPage === 'profile') {
       this.profileSelected = this.nav.selectedPage;
       this.seminarSelected = '';
     } else {

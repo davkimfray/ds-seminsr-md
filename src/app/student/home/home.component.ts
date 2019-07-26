@@ -3,6 +3,7 @@ import {Observable} from 'rxjs';
 import {HttpClient, HttpParams} from '@angular/common/http';
 import {Router} from '@angular/router';
 import {SeminarsService} from '../../service/seminars.service';
+import {StudentService} from '../../service/student.service';
 
 @Component({
   selector: 'app-home',
@@ -18,7 +19,9 @@ export class HomeComponent implements OnInit {
 
 
   constructor(private router: Router,
-              private seminar: SeminarsService) {
+              private seminar: SeminarsService,
+              private student: StudentService) {
+    console.log(this.student.getAll());
   }
 
   fetchSeminarData() {

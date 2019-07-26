@@ -1,5 +1,7 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {StudentNavigationService} from '../student-navigation.service';
+import {AuthenticationService} from '../../service/authentication.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -23,10 +25,15 @@ export class NavbarComponent implements OnInit {
 
   clicked: boolean;
 
-  constructor(private nav: StudentNavigationService) {
+  constructor(private nav: StudentNavigationService,
+              private authenticationService: AuthenticationService,
+              private router: Router) {
     this.clicked = this.clicked === undefined ? false : true;
   }
-
+  logout() {
+    this.authenticationService.logout();
+    this.router.navigate(['/login']);
+  }
   ngOnInit() {
   }
 

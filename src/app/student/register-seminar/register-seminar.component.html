@@ -1,13 +1,22 @@
+<!--
 
 
+<div class="modal-dialog-scrollable" role="document" style="overflow: auto">
 <div class="modal-content">
   <div class="modal-header white-text">
     <button type="button" class="close pull-right white-text h5" aria-label="Close" (click)="modalRef.hide()">
-      <span aria-hidden="true">×</span>
+      <span ara-hidden="true">×</span>
     </button>
     <h4 class="modal-title text-center w-100 h4" id="myModalLabel">Register Seminar</h4>
   </div>
+
+
   <div class="modal-body">
+    -->
+<div *ngIf="registered.status == 401" class=" text-center animated fadeInDown">
+      <i class="fas fa-exclamation-circle amber-text fa-2x flex-center" aria-hidden="true"></i>
+      &nbsp; You have already registered to {{selectedCourseName}} seminar
+    </div>
         <form  [formGroup]="registerSeminarForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
           <div class="row flex-center">
@@ -29,10 +38,10 @@
             </div>
 
             <label class=" h5" style="padding-top: 5px">Select Course:</label>
-            <select (change)="getSeminars()" class=" browser-default custom-select col-5 col-md-2" style="margin-left: 20px" formControlName="course" required
-                    [ngClass]="{ 'is-invalid': submitted && f.course.errors }">
+            <select (change)="getSeminars()" class=" browser-default custom-select col-5 col-md-2" style="margin-left: 20px"
+                    formControlName="course" required [ngClass]="{ 'is-invalid': submitted && f.course.errors }">
               <option value="" disabled selected hidden>Select Course:</option>
-              <option *ngFor="let cou of courses | async" [value]="cou.courseId">{{cou.cou_name}}</option>
+              <option *ngFor="let cou of courses | async" [ngValue]="cou">{{cou.cou_name}}</option>
             </select>
             <div *ngIf="submitted && f.course.errors" class="invalid-feedback text-center">
               <div *ngIf="f.course.errors.required">Course is required</div>
@@ -48,7 +57,7 @@
     <div class="card" *ngFor="let seminar of seminars | async ">
 
       <!-- Card header -->
-      <div class="card-header z-depth-1" role="button" mdbWavesEffect>
+      <div class="card-header z-depth-1 animated fadeIn" role="button" mdbWavesEffect>
         <a (click)="seminarToggle(seminar.day)">
           <h5 class="mb-0 font-weight-bold">
             <i class="far fa-clock mr-1"></i> {{seminar.day}} {{seminar.hour}}
@@ -62,7 +71,7 @@
         <app-seminar [seminar]="seminar"></app-seminar>
 
 
-      <div class=" flex-center">
+      <div class="flex-center animated fadeIn">
         <!-- register button -->
         <a (click)="registerSeminar(seminar.seminarId)" class='col-md-4 btn btn-info'>
           <i class="fas fa-plus white-text " ></i> Register
@@ -72,7 +81,11 @@
 
     </div>
     <!-- Accordion card -->
-
-
+<!--
   </div>
 </div>
+</div>
+
+
+
+-->

@@ -1,7 +1,4 @@
-<app-avbar></app-avbar>
-<div class="container card-group " >
-<a class="btn" (click)="logout()">LogOut</a>
-</div>
+<app-navbar></app-navbar>
 
 <!--Accordion wrapper-->
 <div class="container accordion md-accordion" aria-multiselectable="false">
@@ -59,19 +56,18 @@
     <div class="card-header z-depth-1" role="button" mdbWavesEffect>
       <a (click)="openRegisterSeminar()">
         <h5 class="mb-0 font-weight-bold">
-          <mdb-icon fas icon="table" class="mr-1"></mdb-icon> Register Seminar
+          <i class="far fa-plus-square animated mr-1" ></i> Register Seminar
           <i class="fas fa-plus animated  float-right" ></i>
         </h5>
       </a>
     </div>
 
     <!-- Card body -->
-    <!--<div class="card-body animated fadeInDown" *ngIf="isSeminar" >
-      <app-seminar [element]="element"></app-seminar>
-    </div>-->
+    <div class="card-body animated fadeInDown" *ngIf="isRegisterSeminar" >
+      <app-register-seminar ></app-register-seminar>
+    </div>
   </div>
   <!-- Accordion card -->
 
 </div>
 <!-- Accordion wrapper -->
-

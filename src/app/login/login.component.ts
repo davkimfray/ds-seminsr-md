@@ -27,12 +27,10 @@ export class LoginComponent implements OnInit {
               private authenticationService: AuthenticationService,
               public fb: FormBuilder,
               private http: HttpClient) {
-    this.alert = this.authenticationService.alert;
+    // this.alert = this.authenticationService.alert;
     // redirect to home if already logged in
-    if (this.authenticationService.currentUserValue) {
-      this.router.navigate(['/student']);
-    }
-  }
+    this.authenticationService.isLoggedIn();
+   }
 
   ngOnInit() {
     this.loginForm = this.fb.group({
@@ -59,29 +57,16 @@ export class LoginComponent implements OnInit {
     }
 
     this.loading = true;
-    /*this.authenticationService.login(this.f.username.value, this.f.password.value)
-      .pipe(first())
-      .subscribe(
-        data => {
-          this.router.navigate([this.returnUrl]);
-        },
-        error => {
-          console.log(error);
-          this.alert = true;
-          this.loading = false;
-
-        });*/
-    this.authenticationService.login(this.f.username.value, this.f.password.value)
-      .subscribe(
-        data => {
-          this.router.navigate([this.returnUrl]);
-        },
-        error => {
-          console.log(error);
-          this.alert = true;
-          this.loading = false;
-
-        });
+    this.authenticationService.login(this.f.username.value, this.f.password.value).subscribe(
+      data => {
+        // check if is logged in
+        if (this.authenticationService.currentUserValue) {
+          this.router.navigate(['/student']);
+        }
+      }, error1 => {
+        this.loading = false;
+        this.alert = true;
+      });
   }
 
   /*

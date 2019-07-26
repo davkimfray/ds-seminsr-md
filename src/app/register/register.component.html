@@ -1,5 +1,5 @@
 <!--Main Navigation-->
-<body class=" inro-2">
+<body class=" intro-2">
 <div class="full-bg-img mask rgba-gradient">
   <div class="container flex-center ">
     <div class="flex align-items-center content-height w-100">
@@ -11,15 +11,13 @@
 
 
 
-<div class="">
+<div class="col-xl-9 offset-xl-1">
     <!--Form-->
-    <div class="card fadeInRight">
+    <div class="card wow fadeInight" data-wow-delay="0.3s">
       <div class="card-body">
         <!--Header-->
         <div class="text-center">
-          <h3 class=" fadeInLeft white-text"><i class="fas fa-user-plus white-text" style="padding-right: 20px"></i> Register For Seminar!
-          <button mdbBtn class="" color="default" rounded="true" (click)="openlogin()" mdbWavesEffect>Login</button>
-          </h3>
+          <h4 class=" fadeInLeft white-text">Register</h4>
           <hr class="hr-light">
         </div>
 
@@ -36,7 +34,7 @@
             </div>
           </div>
             <div class="md-form white-text form-group">
-                <select (change)="getCourses()" class="browser-default custom-select" formControlName="college"
+                <select class="browser-default custom-select" formControlName="college"
                          [ngClass]="{ 'is-invalid': submitted && f.college.errors }">
                   <option value="" disabled selected hidden>Select College:</option>
                   <option *ngFor="let col of colleges | async" [value]="col.collegeId">{{col.col_name}}</option>
@@ -45,6 +43,16 @@
                 <div *ngIf="f.college.errors.required">College is required</div>
               </div>
             </div>
+
+          <div class="md-form white-text">
+            <input type="text" id="surName" mdbValidate formControlName="surName"
+                   [ngClass]="{ 'is-invalid': submitted && f.surName.errors }" class="form-control white-text"
+                   mdbInput>
+            <label for="surName" class="white-text">Surname</label>
+            <div *ngIf="submitted && f.surName.errors" class="invalid-feedback text-center">
+              <div *ngIf="f.surName.errors.required">Surname is required</div>
+            </div>
+          </div>
            <!-- <div class="md-form white-text form-group">
               <select class="browser-default custom-select" formControlName="course" required
                       [ngClass]="{ 'is-invalid': submitted && f.course.errors }">
@@ -57,17 +65,8 @@
             </div>-->
           </div>
         <div class="row flex-center form-group">
-        <div class="md-form white-text">
-            <input type="text" id="surName" mdbValidate formControlName="surName"
-                   [ngClass]="{ 'is-invalid': submitted && f.surName.errors }" class="form-control white-text"
-                   mdbInput>
-            <label for="surName" class="white-text">Surname</label>
-          <div *ngIf="submitted && f.surName.errors" class="invalid-feedback text-center">
-            <div *ngIf="f.surName.errors.required">Surname is required</div>
-          </div>
-          </div>
 
-          <div class="md-form white-text form-group">
+           <div class="md-form white-text form-group">
             <input type="text" id="firstName" mdbValidate formControlName="firstName"
                    [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" class="form-control white-text"
                    mdbInput>
@@ -85,7 +84,24 @@
               <div *ngIf="f.midName.errors.required">Middle name is required</div>
             </div>
           </div>
-        </div>
+
+          <div class=" white-text ">
+            Gender:
+          </div>
+          <div class="custom-control custom-radio custom-control-inline white-text form-group">
+            <input type="radio" class="custom-control-input" id="male" formControlName="gender" value="Male">
+            <label class="custom-control-label" for="male">Male</label>
+          </div>
+          <div class="custom-control custom-radio custom-control-inline white-text form-group">
+            <input type="radio" class="custom-control-input" id="female" formControlName="gender" value="Female">
+            <label class="custom-control-label" for="female">Female</label>
+          </div>
+          <div *ngIf="submitted && f.gender.errors" class="invalid-feedback text-center">
+            <div *ngIf="f.gender.errors.required">Gender is required</div>
+          </div>
+      </div>
+
+<!--
         <div class="row white-text flex-center">
           <div class="custom-control custom-radio custom-control-inline white-text form-group">
           Gender:
@@ -102,18 +118,9 @@
             <div *ngIf="f.gender.errors.required">Gender is required</div>
           </div>
         </div>
+-->
 
         <div class="row flex-center">
-          <div class="md-form white-text form-group">
-            <input type="text" id="username" mdbValidate formControlName="username"
-                   [ngClass]="{ 'is-invalid': submitted && f.username.errors }" class="form-control white-text"
-                   mdbInput>
-            <label for="username" class="white-text">Username</label>
-            <div *ngIf="submitted && f.username.errors" class="invalid-feedback text-center">
-              <div *ngIf="f.username.errors.required">Username is required</div>
-            </div>
-          </div>
-          &nbsp;
           <div class="md-form white-text form-group">
             <input type="password" id="password" mdbValidate formControlName="password"
                    [ngClass]="{ 'is-invalid': submitted && f.password.errors }"  class="form-control white-text"
@@ -137,8 +144,12 @@
 
 
           <div class="row flex-center">
-          <button mdbBtn class="form-control col-6 waves-light" rounded="true" color="default"
+
+          <button mdbBtn class="form-control col-md-4 waves-light" rounded="true" color="default"
                   mdbWavesEffect>Register</button>
+            <button mdbBtn class="form-control col-md-4 waves-light" rounded="true" color="default" (click)="openlogin()"
+                  mdbWavesEffect>Login</button>
+
           </div>
           <hr class="hr-light mb-3 mt-4">
 

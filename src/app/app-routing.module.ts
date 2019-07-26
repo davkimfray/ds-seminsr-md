@@ -8,7 +8,7 @@ import {RegisterComponent} from './register/register.component';
 import {ProfileComponent} from './student/profile/profile.component';
 import {SeminarComponent} from './student/seminar/seminar.component';
 import {StudentComponent} from './student/student.component';
-import {AuthGuard} from './auth.guard';
+import {TeacherComponent} from './teacher/teacher.component';
 
 
 
@@ -16,13 +16,14 @@ import {AuthGuard} from './auth.guard';
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'teacher', component: TeacherComponent },
   { path: 'home', component: HomeComponent },
   { path: 'student', component: StudentComponent },
   { path: 'student/profile', component: ProfileComponent },
   { path: 'student/seminar', component: SeminarComponent },
   { path: 'About Us', component: AboutComponent },
   { path: 'Contact', component: ContactsComponent },
-  { path: '', component: StudentComponent, canActivate: [AuthGuard] },
+  { path: '', component: LoginComponent },
   { path: '**', redirectTo: '' }
 
 ];

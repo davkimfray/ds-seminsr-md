@@ -3,8 +3,8 @@
   height: unset !important;
   */
 }
-body {
-  background: url("../../assets/images/udsm.jpg")no-repeat center center;
+html, body {
+  background:url("../../assets/images/udsm.jpg")no-repeat center center;
 }
 .inline-ul {
   color: rgb(70, 171, 230);
@@ -13,7 +13,7 @@ body {
   font-size: 36px;
 }
 .head{
-  margin-top: 5%;
+  margin-top: 1%;
 }
 .forgot-pas u {
   font-family: 'Lato', sans-serif;

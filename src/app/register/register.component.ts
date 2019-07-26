@@ -37,9 +37,7 @@ export class RegisterComponent implements OnInit {
       gender: ['', Validators.required],
       surName: ['', Validators.required],
       college: ['', Validators.required],
-      course: ['', Validators.required],
-      username: ['', Validators.required],
-      password: ['', [Validators.required, Validators.minLength(6)]],
+      password: ['', [Validators.required,  Validators.minLength(6)]],
       confirmPass: ['', Validators.required]
     });
    // this.college = this.collegeService.getAll();
@@ -57,15 +55,13 @@ export class RegisterComponent implements OnInit {
   get f() {
     return this.registrationForm.controls;
   }
-  getCourses() {
-    this.courses = this.courseServices.getById(this.f.college.value);
-    console.log(this.f.college.value);
-}
+
   onSubmit() {
     this.submitted = true;
 
     // stop here if form is invalid
     if (this.registrationForm.invalid) {
+      console.log(this.registrationForm.invalid);
       return;
     }
     this.userServices.register(this.registrationForm.value)

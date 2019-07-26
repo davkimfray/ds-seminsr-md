@@ -3,8 +3,8 @@
   height: unset !important;
   */
 }
-body {
-  background: url("../../assets/images/udsm.jpg")no-repeat center center;
+html, body { height: 100%;
+  background:url("../../assets/images/udsm.jpg")no-repeat center center;
 }
 
 .top-nav-collapse {
@@ -24,12 +24,11 @@ button{
   font-size: 36px;
 }
 .row {
-  margin-top: 3%;
+  padding-bottom: 2%;
 }
 .forgot-pas u {
   font-family: 'Lato', sans-serif;
   font-style: italic;
-  font-size: 20px;
   color: #2bbbad ;
 }
 .loader-body {
@@ -48,4 +47,8 @@ button{
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+.center-page{
+  margin: auto;
 }
