@@ -1,0 +1,526 @@
+
+<!--
+<div class="container">
+
+
+&lt;!&ndash;
+
+
+
+  &lt;!&ndash; Card &ndash;&gt;
+    <mdb-card >
+
+      <mdb-card-header class="card-header">
+        <a class="waves-light col-md-4 text-center white-text h5-responsive traezoid" aria-label="Close" (click)="profileTab()" >
+          <i class="fas fa-user-alt"></i> &nbsp; PROFILE</a>
+        <a class="waves-light col-md-4 text-center white-text h5-responsive trapzoid-act" aria-label="Close" (click)="studentTab()" >
+          <i class="fas fa-user-graduate"></i> &nbsp; STUDENTS</a>
+        <a class="waves-light col-md-4 text-center white-text h5-responsive trpezoid" aria-label="Close" (click)="lastTab()" >
+          &nbsp; three</a>
+      </mdb-card-header>
+      &lt;!&ndash;Card content&ndash;&gt;
+
+
+        <app-profile *ngIf="profTab"></app-profile>
+        <div class="table-responsive" *ngIf="studTab">
+          <table mdbTable hover="true" class="text-center">
+            <thead>
+            <tr>
+              <th *ngFor="let head of headElements; let i = index" [mdbTableSort]="elements" scope="col">{{head}}
+
+              </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr  *ngFor="let el of elements; let i = index">
+              <td scope="row">{{el.studentId}}</td>
+              <td>{{el.reg_no}}</td>
+              <td>{{el.l_name}}</td>
+              <td>{{el.f_name}}</td>
+              <td>{{el.m_name}}</td>
+              <td>
+              <span class="flex-nowrap flex-center">
+                <a class="btn-sm indigo-text" (click)="profileModal.show()" >
+                    <i class="fas fa-eye "></i>
+                </a>
+                <a  class="btn-sm indigo-text"  (click)="resultsModal.show()" >
+                  <i class="fas fa-poll "></i>
+                </a>
+                <a class="btn-sm indigo-text" (click)="profileToggle(el.reg_no)" >
+                  <i class="far fa-trash-alt "></i>
+                </a>
+              </span>
+              </td>
+            </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+
+&lt;!&ndash;
+      profile modal
+&ndash;&gt;
+        <div mdbModal #profileModal="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close pull-right" aria-label="Close" (click)="profileModal.hide()">
+                  <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title w-100 h5 text-center" id="myModalLabel">Student Details</h4>
+              </div>
+              <div class="modal-body" style="padding-top: 20px">
+                <app-profile></app-profile>
+              </div>
+              <div class="modal-footer">
+                <button type="button" mdbBtn color="secondary" class="waves-light btn-sm" aria-label="Close" (click)="profileModal.hide()" mdbWavesEffect>Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+&lt;!&ndash;
+      results modal
+&ndash;&gt;
+      <div mdbModal #resultsModal="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close pull-right" aria-label="Close" (click)="resultsModal.hide()">
+                <span aria-hidden="true">×</span>
+              </button>
+              <h4 class="modal-title w-100 h5 text-center" id="myModalLabel">Course Work</h4>
+            </div>
+            <div class="modal-body row" style="padding-top: 20px">
+
+              <div class="md-form form-group col-md-3">
+                <input type="text" id="form1" mdbValidate formControlName="username"
+                       [ngClass]="{ 'is-invalid': submitted && f.username.errors }" class="form-control "
+                       mdbInput>
+                <label for="form1" class="dark-grey-text">&nbsp;&nbsp;&nbsp;&nbsp; Test Marks</label>
+                <div *ngIf="submitted && f.username.errors" class="invalid-feedback text-center">
+                  <div *ngIf="f.username.errors.required">Username is required</div>
+                </div>
+              </div>
+
+              <div class="md-form form-group col-md-3">
+                <input type="text" id="form2" mdbValidate formControlName="username"
+                       [ngClass]="{ 'is-invalid': submitted && f.username.errors }" class="form-control "
+                       mdbInput>
+                <label for="form2" class="dark-grey-text">&nbsp;&nbsp;&nbsp;&nbsp; Essay Marks</label>
+                <div *ngIf="submitted && f.username.errors" class="invalid-feedback text-center">
+                  <div *ngIf="f.username.errors.required">Username is required</div>
+                </div>
+              </div>
+
+              <div class="md-form form-group col-md-3">
+                <input type="text" id="form3" mdbValidate formControlName="username"
+                       [ngClass]="{ 'is-invalid': submitted && f.username.errors }" class="form-control "
+                       mdbInput>
+                <label for="form3" class="dark-grey-text">&nbsp;&nbsp;&nbsp;&nbsp; Participation Marks</label>
+                <div *ngIf="submitted && f.username.errors" class="invalid-feedback text-center">
+                  <div *ngIf="f.username.errors.required">Username is required</div>
+                </div>
+              </div>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" mdbBtn color="secondary" class="waves-light btn-sm" aria-label="Close" (click)="resultsModal.hide()" mdbWavesEffect>Close</button>
+              <button type="button" mdbBtn color="secondary" class="waves-light btn-sm" aria-label="Close" (click)="resultsModal.hide()" mdbWavesEffect>Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </mdb-card>
+    &lt;!&ndash; Card &ndash;&gt;
+
+
+
+
+&lt;!&ndash;
+  <div class="row">
+    <div class="col-md-12 mx-auto">
+      <div class="md-form">
+        <input type="text" [(ngModel)]="searchText" class="form-control" id="search" mdbInput>
+        <label for="search">Search</label>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="table-responsive">
+  <table mdbTable hover="true" class="z-depth-1 ">
+    <thead>
+      <tr>
+      <th *ngFor="let head of headElements; let i = index" [mdbTableSort]="elements" scope="col">{{head}}
+
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr  *ngFor="let el of elements; let i = index">
+      <th scope="row">{{el.studentId}}</th>
+      <td class="red-text">{{el.reg_no}}</td>
+      <td>{{el.l_name}}</td>
+      <td>{{el.f_name}}</td>
+      <td class="flex-nowrap">
+          <button type="button" mdbBtn color="default" class="relative waves-light btn-sm" rounded="true" (click)="basicModal.show()" mdbWavesEffect>
+            <i *ngIf="isProfile; else noProfile" class="fas fa-eye rotate-icon float-right"></i>
+
+            <ng-template #noProfile>
+              <i class="fas fa-eye rotate-icon float-right"></i>
+            </ng-template>
+          </button>
+          <button mdbBtn class="btn-sm waves-light" color="default" rounded="true" (click)="profileToggle(el.reg_no)" mdbWavesEffect>
+            <i class="far fa-trash-alt rotate-icon float-right"></i>
+          </button>
+      </td>
+    </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+&ndash;&gt;
+
+&lt;!&ndash;
+add new seminar
+&ndash;&gt;
+
+
+</div>
+
+<div class="container">
+  <div class="row" style="float: bottom">
+      <span class="h3" style="float: bottom">
+        <img src="../../assets/images/studentsIcon.png" width="100px">
+        Students Detail
+        </span>
+    <h5 class="float-right" >
+        Students Detail
+      </h5>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row" style="background-color: #00c851;">
+    <div class="col-1">
+      <img src="../../assets/images/studentsIcon.png" width="80px">
+    </div>
+    <div class="col-8" style="top: 50px">
+       <span class="h5">
+          Students Detail
+      </span>
+    </div>
+    <div class="col-2 " style="top: 50px">
+       <span class="h5">
+          close
+      </span>
+    </div>
+
+  </div>
+
+<div class="row" style="background-color: #00c851; height: 50px"></div>
+
+
+&ndash;&gt;
+
+
+&lt;!&ndash;
+<div class="row flex-center flex-nowrap">
+  <label class=" h5" style="padding-top: 5px">Select Seminar Day:</label>
+
+  <div class="md-form white-text form-group">
+    <select (change)="getCourses()" class=" browser-default custom-select" formControlName="couYear"
+            [ngClass]="{ 'is-invalid': submitted && f.couYear.errors }">
+      <option value="" disabled  hidden>Select :</option>
+      <option value="Monday">Monday</option>
+      <option value="Tuesday">Tuesday</option>
+      <option value="Wednesday">Wednesday</option>
+      <option value="Thursday">Thursday</option>
+      <option value="Friday">Friday</option>
+    </select>
+    <div *ngIf="submitted && f.couYear.errors" class="invalid-feedback text-center">
+      <div *ngIf="f.couYear.errors.required">Year is </div>
+    </div>
+  </div>
+
+  <label class=" h5" style="padding-top: 5px">Select Staring Time:</label>
+  <select (change)="getSeminars()" class=" browser-default custom-select col-3 col-md-1" style="margin-left: 20px"
+          formControlName="course" required [ngClass]="{ 'is-invalid': submitted && f.course.errors }">
+    <option value="" disabled selected hidden>Select :</option>
+    <option *ngFor="let time of times" Value="time">{{time.id}} : 00</option>
+  </select>
+  <div *ngIf="submitted && f.course.errors" class="invalid-feedback text-center">
+    <div *ngIf="f.course.errors.required">Course is required</div>
+  </div>
+
+</div>
+&ndash;&gt;
+
+
+
+
+<div class="row" style="margin: 20px 0 0 20px ">
+  <div class="col-md-1  h5">No.</div>
+  <div class="col-md-2 h5 ">Reg No</div>
+  <div class="col-md-3 h5 ">Full name</div>
+  <div class="col-md-2 h5 " style="margin: 0 0 0 25px ">Coursework</div>
+
+</div>
+
+
+<mat-accordion *ngFor="let rep of headElements" class="table-responsive">
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <div class="col-md-1">100</div>
+      <div class="col-md-2">2016-04-00000</div>
+      <div class="col-md-4">Juma Juma Juma</div>
+      <div class="col-md-1">40</div>
+      <div class="col-md-4 text-right">
+          <a> <i class="fas fa-eye text-success" ></i> </a>
+          <a> <i class="far fa-trash-alt text-success" style="padding-left: 20px"></i> </a>
+          <a (click)="profileModal.show()"> <i class=" fa-close text-grey" style="padding-left: 20px">x</i> </a>
+      </div>
+    </mat-expansion-panel-header>
+    <div class="flex-center">
+    Test <input type="number" formControlName="testMarks" class="form-control col-2" style="margin: 10px 50px 0 20px " mdbInput>
+    Essay <input type="number" formControlName="essayMarks" class="form-control col-2" style="margin: 10px 50px 0 20px " mdbInput>
+    Attendance <input type="number" formControlName="attendanceMarks" class="form-control col-2" style="margin: 10px 50px 0 20px " mdbInput>
+
+      <button mdbBtn class="btn-sm waves-light" color="default" rounded="true" (click)="profileToggle(el.reg_no)" mdbWavesEffect>
+        Save
+      </button>
+    </div>
+  </mat-expansion-panel>
+
+</mat-accordion>
+
+
+
+
+<div class="row">
+  <a class="col-md-2 mx-0 my-1">
+    &lt;!&ndash;Card&ndash;&gt;
+    <mdb-card style="background-color: #00c851">
+      &lt;!&ndash;Card content&ndash;&gt;
+      <mdb-card-body class=" white-text">
+
+            &lt;!&ndash;Title&ndash;&gt;
+        <mdb-card-title>
+          <h4>CoICT</h4>
+        </mdb-card-title>
+
+
+        &lt;!&ndash;Text&ndash;&gt;
+
+        <mdb-card-text class="white-text">
+          DS 101 <br>
+          Students: 100
+        </mdb-card-text>
+
+        &lt;!&ndash;<a href="#!" class="white-text d-flex justify-content-end">
+          <h5 class="waves-light white-text" mdbWavesEffect>Read more
+            <span>
+              <i class="fas fa-chevron-right pl-2 waves-light" mdbWavesEffect></i>
+            </span>
+          </h5>
+        </a>&ndash;&gt;
+      </mdb-card-body>
+      &lt;!&ndash;/.Card content&ndash;&gt;
+    </mdb-card>
+    &lt;!&ndash;/.Card&ndash;&gt;
+  </a>
+  <a class="col-md-2 mx-0 my-1">
+    &lt;!&ndash;Card&ndash;&gt;
+    <mdb-card style="background-color: #00c851">
+      &lt;!&ndash;Card content&ndash;&gt;
+      <mdb-card-body class="elegant-color white-text">
+
+            &lt;!&ndash;Title&ndash;&gt;
+        <mdb-card-title>
+          <h4>CoICT</h4>
+        </mdb-card-title>
+
+
+        &lt;!&ndash;Text&ndash;&gt;
+
+        <mdb-card-text class="white-text">
+          DS 101 <br>
+          Students: 100
+        </mdb-card-text>
+
+        &lt;!&ndash;<a href="#!" class="white-text d-flex justify-content-end">
+          <h5 class="waves-light white-text" mdbWavesEffect>Read more
+            <span>
+              <i class="fas fa-chevron-right pl-2 waves-light" mdbWavesEffect></i>
+            </span>
+          </h5>
+        </a>&ndash;&gt;
+      </mdb-card-body>
+      &lt;!&ndash;/.Card content&ndash;&gt;
+    </mdb-card>
+    &lt;!&ndash;/.Card&ndash;&gt;
+  </a>
+  <a class="col-md-2 mx-0 my-1">
+    &lt;!&ndash;Card&ndash;&gt;
+    <mdb-card style="background-color: #00c851">
+      &lt;!&ndash;Card content&ndash;&gt;
+      <mdb-card-body class=" white-text">
+
+            &lt;!&ndash;Title&ndash;&gt;
+        <mdb-card-title>
+          <h4>CoICT</h4>
+        </mdb-card-title>
+
+
+        &lt;!&ndash;Text&ndash;&gt;
+
+        <mdb-card-text class="white-text">
+          DS 101 <br>
+          Students: 100
+        </mdb-card-text>
+
+        &lt;!&ndash;<a href="#!" class="white-text d-flex justify-content-end">
+          <h5 class="waves-light white-text" mdbWavesEffect>Read more
+            <span>
+              <i class="fas fa-chevron-right pl-2 waves-light" mdbWavesEffect></i>
+            </span>
+          </h5>
+        </a>&ndash;&gt;
+      </mdb-card-body>
+      &lt;!&ndash;/.Card content&ndash;&gt;
+    </mdb-card>
+    &lt;!&ndash;/.Card&ndash;&gt;
+  </a>
+  <a class="col-md-2 mx-0 my-1">
+    &lt;!&ndash;Card&ndash;&gt;
+    <mdb-card style="background-color: #00c851">
+      &lt;!&ndash;Card content&ndash;&gt;
+      <mdb-card-body class="elegant-color white-text">
+
+            &lt;!&ndash;Title&ndash;&gt;
+        <mdb-card-title>
+          <h4>All</h4>
+        </mdb-card-title>
+
+
+        &lt;!&ndash;Text&ndash;&gt;
+
+        <mdb-card-text class="white-text">
+          DS 101 <br>
+          Students: 100
+        </mdb-card-text>
+
+        &lt;!&ndash;<a href="#!" class="white-text d-flex justify-content-end">
+          <h5 class="waves-light white-text" mdbWavesEffect>Read more
+            <span>
+              <i class="fas fa-chevron-right pl-2 waves-light" mdbWavesEffect></i>
+            </span>
+          </h5>
+        </a>&ndash;&gt;
+      </mdb-card-body>
+      &lt;!&ndash;/.Card content&ndash;&gt;
+    </mdb-card>
+    &lt;!&ndash;/.Card&ndash;&gt;
+  </a>
+</div>
+</div>
+-->
+
+
+
+
+
+
+<!--
+profile modal
+-->
+
+<!--
+<div mdbModal #profileModal="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close pull-right" aria-label="Close" (click)="profileModal.hide()">
+          <span aria-hidden="true">×</span>
+        </button>
+        <h4 class="modal-title w-100 h5 text-center" id="myModalLabel">Student Details</h4>
+      </div>
+      <div class="modal-body" style="padding-top: 20px">
+        <app-profile></app-profile>
+      </div>
+      <div class="modal-footer">
+        <button type="button" mdbBtn color="secondary" class="waves-light btn-sm" aria-label="Close" (click)="profileModal.hide()" mdbWavesEffect>Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+
+
+<!--
+results modal
+-->
+<!--
+<div mdbModal #resultsModal="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close pull-right" aria-label="Close" (click)="resultsModal.hide()">
+          <span aria-hidden="true">×</span>
+        </button>
+        <h4 class="modal-title w-100 h5 text-center" id="myModalLabel">Course Work</h4>
+      </div>
+      <div class="modal-body row" style="padding-top: 20px">
+
+        <div class="md-form form-group col-md-3">
+          <input type="text" id="form1" mdbValidate formControlName="username"
+                 [ngClass]="{ 'is-invalid': submitted && f.username.errors }" class="form-control "
+                 mdbInput>
+          <label for="form1" class="dark-grey-text">&nbsp;&nbsp;&nbsp;&nbsp; Test Marks</label>
+          <div *ngIf="submitted && f.username.errors" class="invalid-feedback text-center">
+            <div *ngIf="f.username.errors.required">Username is required</div>
+          </div>
+        </div>
+
+        <div class="md-form form-group col-md-3">
+          <input type="text" id="form2" mdbValidate formControlName="username"
+                 [ngClass]="{ 'is-invalid': submitted && f.username.errors }" class="form-control "
+                 mdbInput>
+          <label for="form2" class="dark-grey-text">&nbsp;&nbsp;&nbsp;&nbsp; Essay Marks</label>
+          <div *ngIf="submitted && f.username.errors" class="invalid-feedback text-center">
+            <div *ngIf="f.username.errors.required">Username is required</div>
+          </div>
+        </div>
+
+        <div class="md-form form-group col-md-3">
+          <input type="text" id="form3" mdbValidate formControlName="username"
+                 [ngClass]="{ 'is-invalid': submitted && f.username.errors }" class="form-control "
+                 mdbInput>
+          <label for="form3" class="dark-grey-text">&nbsp;&nbsp;&nbsp;&nbsp; Participation Marks</label>
+          <div *ngIf="submitted && f.username.errors" class="invalid-feedback text-center">
+            <div *ngIf="f.username.errors.required">Username is required</div>
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" mdbBtn color="secondary" class="waves-light btn-sm" aria-label="Close" (click)="resultsModal.hide()" mdbWavesEffect>Close</button>
+        <button type="button" mdbBtn color="secondary" class="waves-light btn-sm" aria-label="Close" (click)="resultsModal.hide()" mdbWavesEffect>Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+<app-nav></app-nav>
+
+

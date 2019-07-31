@@ -1,33 +1,27 @@
 <div class="example-container" [class.example-is-mobile]="mobileQuery.matches" >
-  <mat-toolbar *ngIf="mobileQuery.matches" class="example-toolbar white-text" id="mobileToolbar">
-    <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
-    <h1 class="example-app-name">Responsive App</h1>
-    <span class="example-spacer"></span>
-    <button mat-icon-button (click)="snav.toggle()" ><mat-icon>favorite</mat-icon></button>
-    <button mat-icon-button (click)="snav.toggle()"><mat-icon>delete</mat-icon></button>
-  </mat-toolbar>
+
 
   <mat-sidenav-container class="example-sidenav-container"
-                         [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+                         [style.marginTop.px]="mobileQuery.matches ? 0 : 0">
       <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [opened]="false"
-                 [fixedInViewport]="mobileQuery.matches" fixedTopGap="56"  >
+                 [fixedInViewport]="mobileQuery.matches" fixedTopGap="0"  >
      <app-teacher-sidenav></app-teacher-sidenav>
     </mat-sidenav>
 
     <mat-sidenav-content>
-      <mat-toolbar *ngIf="!mobileQuery.matches" class="example-toolbar" style="margin-top: -10px;">
+      <mat-toolbar class="example-toolbar" >
         <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
-        <h1 class="example-app-name"> App</h1>
+        <h1 class="example-app-name">Responsive App</h1>
         <span class="example-spacer"></span>
         <button mat-icon-button (click)="snav.toggle()"><mat-icon>favorite</mat-icon></button>
         <button mat-icon-button (click)="snav.toggle()"><mat-icon>delete</mat-icon></button>
       </mat-toolbar>
       <div class="container">
+<!--
         <app-view-student> </app-view-student>
+-->
+        <app-seminar-teacher></app-seminar-teacher>
       </div>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>
-
-
-

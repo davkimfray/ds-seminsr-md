@@ -55,6 +55,7 @@ import {
 import { StudentDetailsComponent } from './student-details/student-details.component';
 import {NavComponent} from './teacher/nav/nav.component';
 import { TeacherSidenavComponent } from './teacher/teacher-sidenav/teacher-sidenav.component';
+import { SeminarTeacherComponent } from './teacher/seminar-teacher/seminar-teacher.component';
 
 @NgModule({
   declarations: [
@@ -77,6 +78,7 @@ import { TeacherSidenavComponent } from './teacher/teacher-sidenav/teacher-siden
     StudentDetailsComponent,
     NavComponent,
     TeacherSidenavComponent,
+    SeminarTeacherComponent,
     ],
   imports: [
     BrowserModule,

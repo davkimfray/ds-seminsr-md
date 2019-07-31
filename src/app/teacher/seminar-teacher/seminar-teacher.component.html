@@ -1,0 +1,35 @@
+<div class="row">
+  <mat-card *ngFor="let item of items;" class="example-card flex-center">
+    <mat-card-header  >
+      <mat-card-title class="white-text -align-center" style="padding: 5px">DS 101</mat-card-title>
+    </mat-card-header>
+      <mat-expansion-panel class="mat-elevation-z0" [expanded]="panelOpenState[item]">
+        <div class="css-shapes-triangle"></div>
+        <label>
+           <mat-icon class="icon">today</mat-icon>
+          <span style="font-weight: bold">Day: </span> Monday
+        </label>
+
+        <label>
+          <mat-icon class="icon">access_time</mat-icon>
+          <span style="font-weight: bold">Time: </span> 10:00 - 11:55
+        </label>
+
+        <label>
+          <mat-icon class="icon">location_on</mat-icon>
+          <span style="font-weight: bold">Venue: </span> Yombo 5
+        </label>
+
+        <label>
+          <mat-icon class="icon">people</mat-icon>
+          <span style="font-weight: bold">Students: </span> 20 Students
+        </label>
+
+      </mat-expansion-panel>
+    <mat-card-actions>
+      <button mat-button style="width: 250px; margin-left: 8px; background-color: #00c851; color: white" (click)="click(item)">More details
+        <mat-icon>{{icon[item]  ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

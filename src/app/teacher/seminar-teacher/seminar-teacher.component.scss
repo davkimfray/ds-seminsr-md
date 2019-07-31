@@ -1,0 +1,28 @@
+mat-expansion-panel{
+  width: 250px;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+.example-card{
+  width: 250px;
+  margin: 10px;
+  padding: 0;
+  background-color: #00c851
+}
+
+.css-shapes-triangle{
+  margin-left: -25px;
+  padding-bottom: 10px;
+  height: 0px;
+  width: 0px;
+  border-left: 125px solid transparent;
+  border-right: 125px solid transparent;
+  border-top: 30px solid #00c851;
+}
+
+.icon{
+  position: relative;
+  top: 5px;
+  margin-right: 10px;
+}

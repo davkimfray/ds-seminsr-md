@@ -1,0 +1,36 @@
+mat-nav-list{
+  width: 220px;
+}
+
+.item:hover{
+  cursor: pointer;
+  background: rgba(0,0,0, 0.3);
+}
+li{
+  list-style-type: none;
+  padding: 5px 10px 5px 10px;
+  color: white;
+  width: 100%;
+}
+
+
+
+
+.cool-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.cool-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width .3s;
+}
+
+.cool-link:hover::after {
+  width: 87%;
+  //transition: width .3s;
+}
