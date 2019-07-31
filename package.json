@@ -1,7 +1,10 @@
 {
   "name": "mdb-angular-free",
   "version": "7.4.1",
-  "license": "MIT",
+  "engines": {
+    "node": "v11.8.0",
+    "npm": "6.10.1"
+  },"license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
