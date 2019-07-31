@@ -119,12 +119,12 @@ import { SeminarTeacherComponent } from './teacher/seminar-teacher/seminar-teach
     MatSortModule,
     MatPaginatorModule,
     JwtModule.forRoot({
-      config: {
+     /* config: {
         tokenGetter: function  tokenGetter() {
           return     localStorage.getItem('access_token'); },
         whitelistedDomains: ['localhost:3000', '41.86.177.133:3000'],
         blacklistedRoutes: ['http://localhost:3000/login']
-      }
+      }*/
     })
   ],
   entryComponents: [ RegisterSeminarComponent ],
