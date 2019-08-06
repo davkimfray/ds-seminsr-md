@@ -57,6 +57,9 @@ import {NavComponent} from './teacher/nav/nav.component';
 import {TeacherSidenavComponent} from './teacher/teacher-sidenav/teacher-sidenav.component';
 import {SeminarTeacherComponent} from './teacher/seminar-teacher/seminar-teacher.component';
 
+export function getToken(): string {
+  return localStorage.getItem('token');
+}
 
 
 @NgModule({
@@ -122,11 +125,7 @@ import {SeminarTeacherComponent} from './teacher/seminar-teacher/seminar-teacher
     MatPaginatorModule,
     JwtModule.forRoot({
       config: {
-        tokenGetter: () => {
-          return new Promise(resolve => {
-            localStorage.getItem('token');
-          });
-        },
+        tokenGetter: getToken,
         whitelistedDomains: ['localhost:3000', '41.86.177.133:3000'],
         blacklistedRoutes: ['http://localhost:3000/login']
       }
