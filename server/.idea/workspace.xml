@@ -2,53 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a7b1e87-221b-4a87-bf53-2d022a538e0c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../src/app/service/student.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../src/app/teacher/nav/nav.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../src/app/teacher/nav/nav.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../src/app/teacher/nav/nav.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../src/app/teacher/nav/nav.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server.js" beforeDir="false" afterPath="$PROJECT_DIR$/../server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/app/auth.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/auth.guard.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/app/helpers/error.interceptor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/helpers/error.interceptor.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/app/helpers/jwt.interceptor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/helpers/jwt.interceptor.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/app/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/app/login/login.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/login/login.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/app/make-order/make-order.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/make-order/make-order.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/app/register/register.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/register/register.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/app/register/register.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/register/register.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/app/register/register.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/register/register.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/app/service/authentication.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/service/authentication.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/app/service/backend-config.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/service/backend-config.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/app/service/course.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/service/course.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/app/service/seminars.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/service/seminars.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/app/student.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/service/student.service.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/app/student.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/app/student/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/student/home/home.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/app/student/navbar/navbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/student/navbar/navbar.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/app/student/navbar/navbar.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/student/navbar/navbar.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/app/student/navbar/navbar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/student/navbar/navbar.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/app/student/profile/profile.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/student/profile/profile.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/app/student/profile/profile.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/student/profile/profile.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/app/student/profile/profile.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/student/profile/profile.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/app/student/register-seminar/register-seminar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/student/register-seminar/register-seminar.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/app/student/register-seminar/register-seminar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/student/register-seminar/register-seminar.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/app/student/seminar/seminar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/student/seminar/seminar.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/app/student/seminar/seminar.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/student/seminar/seminar.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/app/student/seminar/seminar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/student/seminar/seminar.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/app/student/student.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/student/student.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/app/student/student.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/student/student.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/app/student/student.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/student/student.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/app/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/user.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../src/styles.scss" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -66,9 +21,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="23">
               <caret line="14" selection-start-line="14" selection-end-line="14" />
-              <folding>
-                <marker date="1560604942362" expanded="true" signature="3378:3919" ph="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -110,6 +62,22 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="server" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="server" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="server" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -127,22 +95,6 @@
               <item name="server" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="server" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="server" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="server" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -238,11 +190,12 @@
       <workItem from="1557821791279" duration="624000" />
       <workItem from="1560604782294" duration="824000" />
       <workItem from="1560810238477" duration="1200000" />
+      <workItem from="1565088580461" duration="677000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126455000" />
+    <option name="totallyTimeSpent" value="127132000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -255,6 +208,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="733" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17051378" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -262,14 +216,14 @@
       <window_info id="DB Browser" order="3" weight="0.32867134" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" weight="0.46489564" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" weight="0.46483704" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49964464" weight="0.39848197" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32951945" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.4890614" visible="true" weight="0.2161235" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.4890614" visible="true" weight="0.21440823" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5109386" side_tool="true" weight="0.30851063" />
       <window_info anchor="bottom" id="DB Execution Console" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -449,9 +403,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <marker date="1560604942362" expanded="true" signature="3378:3919" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
